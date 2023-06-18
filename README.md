@@ -15,7 +15,6 @@ Astrian Tales üçüncül kişi bakış açısından farklı karakterleri kontro
  Astrian Tales, galakside yolunu kaybetmiş olan uzaylı arkadaşımızın dünyanın bir köşesinde yer alan bir kasabaya iniş yapmasıyla başlar. Gemisinin motoru bozulduğu için tekrar uçuş yapamayan bu arkadaşımız, halkıyla iletişim kurmaya çalışır ancak iletişim ağı da çökmüştür. Köylülerle ilk teması iyi geçmeyen uzaylı arkadaşımız bu macerasında yeni bir dostla tanışır.
 ## Hedef Kitle
 * Indie oyun severler
-* Oyunlarla yeni tanışan 5-12 yaş aralığında çocuklar
 * Alternatif son arayan oyuncular
 ## Product Backlog
 [Trello Backlog Board](https://trello.com/b/6xbCLzBb/pm).
@@ -24,3 +23,11 @@ Astrian Tales üçüncül kişi bakış açısından farklı karakterleri kontro
 * **Sprint Norları:** UStory'ler başlıklarda ve yeşil renkle gösterilmiş olup Task'lar kırmızı renklidir. Kartlar incelendiğine puanlandırılma ve detaylandırılması bulunabilir.
 * **Puan tamamlama mantığı:** Toplamda proje boyunca tamamlanması gereken 300 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 100 ile başlaması gerektiğine karar verildi.
 * **Daily Scrum:** Discord üzerinden günlük çıktılar takım üyelerinin isimlerinin kısaltmalarıyla [belirtilmiştir](https://drive.google.com/file/d/1EPCJtCumMogsD1H_NKTlLEihNWNHiCa6/view?usp=sharing).
+* Sprint Board Update:
+![resim](https://github.com/luxoline/U-145/assets/102388276/9a4285b0-b350-46af-9652-c06739e724ed)
+* Ürün Durumu:
+![image](https://github.com/luxoline/U-145/assets/102388276/978b7025-e195-4a87-884a-a17dbf4c4017)
+![image](https://github.com/luxoline/U-145/assets/102388276/e00651cb-ed27-49f1-aba6-40d641396246)
+* Sprint Review: 
+* Sprint Retrospective:
+* Diğer Notlar:
