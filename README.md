@@ -30,7 +30,7 @@ Astrian Tales üçüncül kişi bakış açısından farklı karakterleri kontro
 ![image](https://github.com/luxoline/U-145/assets/102388276/e00651cb-ed27-49f1-aba6-40d641396246)
  **Sprint Review:** Oyunun temel unsurları ayarlanmış olup, bundan sonra yapılacak olan değişikliklere ve eklemelere hız verilecektir.
  **Sprint Retrospective:**
-    * Takım içindeki görev dağılımıyla ilgili düzenleme yapılması kararı alınmıştır.
+    * Sprint 1'den kalan 50 puanlık görevlendirmeler başta olmak üzere takım içindeki görev dağılımıyla ilgili düzenleme yapılması kararı alınmıştır.
     * Bütün takım üyelerinin gelecek sprintlerde daha aktif olması gerektiğine vurgu yapılmıştır.
     * Görev dağılımları daha erkenden yapılmalıdır.
     
