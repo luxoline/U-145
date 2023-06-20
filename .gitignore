@@ -54,6 +54,7 @@ ExportedObj/
 
 # Unity3D generated file on crash reports
 sysinfo.txt
+.Assets/TerrainSampleAssets
 
 # Builds
 *.apk
@@ -70,3 +71,5 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+.Assets/TerrainSampleAssets
+Assets/TerrainSampleAssets/
