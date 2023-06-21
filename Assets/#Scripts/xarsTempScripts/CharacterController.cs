@@ -12,10 +12,7 @@ public class CharacterController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Rayc();
-        }
+        
     }
 
     private void FixedUpdate()

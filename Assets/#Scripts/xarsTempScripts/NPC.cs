@@ -10,6 +10,11 @@ public class NPC : MonoBehaviour
     public int npcQuestNumber = 1;
 
 
+    private void Start()
+    {
+        
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -20,20 +25,17 @@ public class NPC : MonoBehaviour
             {
                 if (QuestManager.Instance.CheckQuestObjects())
                 {
-                    Debug.Log("npc gorevi tamamlandi");
-                    QuestManager.Instance.SetQuest();
-                    Debug.Log(QuestManager.Instance.currentQuest.questName + " gorevi aktif");
+                    DialogueManager.Instance.StartDialogue(Resources.Load<DialogueData>("Dialogues/" + gameObject.name + "/QuestCompleted/0"));
                 }
                 else
                 {
-                    Debug.Log("gorev aktif ama tamamlanmadi, gorev hatirlatmasi diyalogu yazilabilir: " + QuestManager.Instance.currentQuest.questDescription);
+                    DialogueManager.Instance.StartDialogue(Resources.Load<DialogueData>("Dialogues/"+ gameObject.name + "/QuestActive/0"));
                 }
             }
             else if(QuestManager.Instance.IsCurrentQuest(npcQuestNumber - 1))
             {
                 Debug.Log("npc ile konus gorevi tamamlandi");
-                QuestManager.Instance.SetQuest();
-                Debug.Log(QuestManager.Instance.currentQuest.questName + " gorevi aktif");
+                DialogueManager.Instance.StartDialogue(Resources.Load<DialogueData>("Dialogues/" + gameObject.name + "/GetQuest/0"));
             }
             else
             {

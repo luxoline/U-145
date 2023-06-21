@@ -8,11 +8,13 @@ public class QuestManager : MonoBehaviour
 {
     public static QuestManager Instance { get; private set; }
 
+    public GameObject questCanvas;
 
     public TMP_Text questText;
 
     public Quest currentQuest;
     public List<string> questObjects = new List<string>();
+    public List<int> completedQuests = new List<int>();
 
     void Awake()
     {
@@ -21,6 +23,7 @@ public class QuestManager : MonoBehaviour
         {
             currentQuest = Resources.Load<Quest>("Quests/0");
             Debug.Log(currentQuest.questDescription);
+            SetQuestText();
         }
     }
 
@@ -49,7 +52,7 @@ public class QuestManager : MonoBehaviour
 
     public void SetQuestText()
     {
-        //questText.text = "Current Quest:\n" + currentQuest.questDescription;
+        questText.text = "Current Quest:\n" + currentQuest.questDescription;
     }
 
     public void SetQuest()
@@ -70,5 +73,9 @@ public class QuestManager : MonoBehaviour
             return true;
         }
         return questObjects.Contains(currentQuest.neededItemTag);
+    }
+    public void CompleteCurrentQuest()
+    {
+        completedQuests.Add(currentQuest.questNumber);
     }
 }
