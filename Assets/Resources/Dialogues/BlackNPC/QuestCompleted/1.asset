@@ -12,10 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b584cd1c3fdf2a429baa575c8ba7634, type: 3}
   m_Name: 1
   m_EditorClassIdentifier: 
-  dialogueText: "Ba\u015Fka bir \u015Fey yok. Te\u015Fekk\xFCr ederim. (\xF6d\xFCl
-    vb verdi)"
+  dialogueText: "Baska bir sey yok. Tesekkur ederim. (\xF6d\xFCl vb verdi)"
   options:
-  - text: "\u0130yi g\xFCnler!"
+  - text: "\u0130yi gunler!"
     nextDialogue: {fileID: 0}
     quest: {fileID: 0}
     isEndingOption: 1

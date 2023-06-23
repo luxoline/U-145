@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b584cd1c3fdf2a429baa575c8ba7634, type: 3}
   m_Name: 1
   m_EditorClassIdentifier: 
-  dialogueText: "\u015Euradaki mor k\xFCpe ihtiyac\u0131m var. Bana getirebilir misin?"
+  dialogueText: Suradaki mor kupe ihtiyacim var. Bana getirebilir misin?
   options:
   - text: Elbette!
     nextDialogue: {fileID: 0}
     quest: {fileID: 11400000, guid: 11028fcb9f4a8504488eee838b29a1d4, type: 2}
     isEndingOption: 1
-  - text: "Malesef \u015Fu an me\u015Fgul\xFCm."
+  - text: Malesef su an mesgulum.
     nextDialogue: {fileID: 0}
     quest: {fileID: 0}
     isEndingOption: 1

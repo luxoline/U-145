@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: Selam!
   options:
-  - text: "Selam! Senin i\xE7in ne yapabilirim?"
+  - text: Selam! Senin icin ne yapabilirim?
     nextDialogue: {fileID: 11400000, guid: 0097c554b470a6b4999d2405efba8ea5, type: 2}
     quest: {fileID: 0}
     isEndingOption: 0

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b584cd1c3fdf2a429baa575c8ba7634, type: 3}
   m_Name: 0
   m_EditorClassIdentifier: 
-  dialogueText: "K\xFCp\xFC hala almam\u0131\u015Fs\u0131n."
+  dialogueText: Kupu hala almamissin.
   options:
-  - text: "Evet. Hemen al\u0131p getirece\u011Fim."
+  - text: Evet. Hemen alip getirecegim.
     nextDialogue: {fileID: 0}
     quest: {fileID: 0}
     isEndingOption: 1
