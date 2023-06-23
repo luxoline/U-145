@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
-    public float moveSpeed = 5f, rotationSmoothness = 0.5f, jumpSpeed = 5f, jumpDelay = 0.5f;
+    public float moveSpeed = 5f, sprintSpeed = 10f, rotationSmoothness = 0.5f, jumpSpeed = 5f, jumpDelay = 0.5f;
+    float speed;
 
     Rigidbody rb;
     Animator animator;
@@ -24,6 +25,16 @@ public class CharacterController : MonoBehaviour
         moveVertical = Input.GetAxis("Vertical");
 
         Animations();
+
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = sprintSpeed;
+        }
+        else
+        {
+            speed = moveSpeed;
+        }
 
         if (Input.GetKeyDown(KeyCode.Space) && rb.velocity.y <= 0.01 && ctr <= 0f)
         {
@@ -53,7 +64,7 @@ public class CharacterController : MonoBehaviour
     {
         Vector3 moveDirection = new Vector3(moveHorizontal, 0f, moveVertical).normalized;
 
-        rb.velocity = new Vector3(moveDirection.x * moveSpeed, rb.velocity.y, moveDirection.z * moveSpeed);
+        rb.velocity = new Vector3(moveDirection.x * speed, rb.velocity.y, moveDirection.z * speed);
         
         
 
