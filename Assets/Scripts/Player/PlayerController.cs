@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class CharacterController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f, sprintSpeed = 10f, rotationSmoothness = 0.5f, jumpSpeed = 5f, jumpDelay = 0.5f;
     float speed;
@@ -11,30 +11,41 @@ public class CharacterController : MonoBehaviour
 
     float moveHorizontal, moveVertical, ctr;
     bool jump;
+    public bool canWalk;
 
-    private void Start()
+    private void Awake()
     {
+        DialogueManager.Instance.playerController = this;
         ctr = 0;
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
     }
 
+
+    //karakter değişimi yapılırken önce aktif olan karakter disable edilip sonra diğer karakter enable edilmeli
+    private void OnEnable()
+    {
+        canWalk = true;
+        DialogueManager.Instance.playerController = this;
+    }
+    private void OnDisable()
+    {
+        canWalk = false;
+        DialogueManager.Instance.playerController = null;
+    }
+
     private void Update()
     {
-        moveHorizontal = Input.GetAxis("Horizontal");
-        moveVertical = Input.GetAxis("Vertical");
-
+        if (canWalk)
+        {
+            moveHorizontal = Input.GetAxis("Horizontal");
+            moveVertical = Input.GetAxis("Vertical");
+        }
+        
         Animations();
-
-
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            speed = sprintSpeed;
-        }
-        else
-        {
-            speed = moveSpeed;
-        }
+        
+        if (Input.GetKey(KeyCode.LeftShift)) speed = sprintSpeed;
+        else speed = moveSpeed;
 
         if (Input.GetKeyDown(KeyCode.Space) && rb.velocity.y <= 0.01 && ctr <= 0f)
         {
@@ -50,6 +61,13 @@ public class CharacterController : MonoBehaviour
 
     private void Animations()
     {
+        if (canWalk == false)
+        {
+            Debug.Log("yurumemesi lazim");
+            animator.SetBool("isRunning",false);
+            animator.SetBool("isJumping", false);
+        }
+        
         if (Mathf.Abs(moveHorizontal) > 0.1f || Mathf.Abs(moveVertical) > 0.1f)
         {
             animator.SetBool("isRunning", true);
@@ -62,11 +80,17 @@ public class CharacterController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Movement();
+    }
+
+    private void Movement()
+    {
+        if (!canWalk) return;
         Vector3 moveDirection = new Vector3(moveHorizontal, 0f, moveVertical).normalized;
 
         rb.velocity = new Vector3(moveDirection.x * speed, rb.velocity.y, moveDirection.z * speed);
-        
-        
+
+
 
         if (moveDirection != Vector3.zero)
         {

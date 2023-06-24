@@ -3336,7 +3336,7 @@ Transform:
   - {fileID: 6785097212653065918}
   - {fileID: 135967096339623524}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &7627585233677165285
 Animator:
@@ -3425,7 +3425,7 @@ MonoBehaviour:
   sprintSpeed: 7
   rotationSmoothness: 0.2
   jumpSpeed: 200
-  jumpDelay: 2
+  jumpDelay: 1.5
 --- !u!1 &8051494838864824478
 GameObject:
   m_ObjectHideFlags: 0

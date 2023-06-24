@@ -12,13 +12,22 @@ public class DialogueManager : MonoBehaviour
     public TMP_Text dialogueText;
     public Button[] optionButtons;
     public float typeSpeed;
-    private Coroutine typingCoroutine;
+    public PlayerController playerController;
 
     private DialogueData currentDialogue;
+    bool skipDialogue, isDialogueStarted;
 
     void Awake()
     {
         SingletonThisGameObject();
+    }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0) && isDialogueStarted)
+        {
+            skipDialogue = true;
+        }
     }
 
     private void SingletonThisGameObject()
@@ -36,6 +45,8 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(DialogueData dialogueData)
     {
+        playerController.canWalk = false;
+        isDialogueStarted = true;
         dialogueCanvas.SetActive(true);
         currentDialogue = dialogueData;
         UpdateDialogUI();
@@ -60,6 +71,7 @@ public class DialogueManager : MonoBehaviour
             else if (selectedOption.isEndingOption)
             {
                 dialogueCanvas.SetActive(false);
+                playerController.canWalk = true;
             }
         }
 
@@ -91,9 +103,10 @@ public class DialogueManager : MonoBehaviour
             elapsedTime += Time.deltaTime;
 
             // Eğer ekrana tıklanırsa veya yazma süresi sona ererse döngüyü bitirin
-            if (Input.GetMouseButtonDown(0) || elapsedTime >= typeSpeed * currentDialogue.dialogueText.Length)
+            if (skipDialogue || elapsedTime >= typeSpeed * currentDialogue.dialogueText.Length)
             {
                 showAllText = true;
+                skipDialogue = false;
                 break;
             }
 
@@ -107,18 +120,9 @@ public class DialogueManager : MonoBehaviour
         }
 
         ShowOptionButtons();
+        isDialogueStarted = false;
     }
 
-    public void OnPanelClicked()
-    {
-        if (typingCoroutine != null)
-        {
-            StopCoroutine(typingCoroutine);
-            typingCoroutine = null;
-            dialogueText.text = currentDialogue.dialogueText;
-            ShowOptionButtons();
-        }
-    }
 
 
     private void ShowOptionButtons()
