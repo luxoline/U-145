@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
 
     float moveHorizontal, moveVertical, ctr;
     bool jump;
-    public bool canWalk;
+    public bool canWalk, isWalking;
 
     private void Awake()
     {
@@ -27,39 +27,41 @@ public class PlayerController : MonoBehaviour
     {
         canWalk = true;
         DialogueManager.Instance.playerController = this;
+        //AudioManager.Instance.playerController = this;
     }
     private void OnDisable()
     {
         canWalk = false;
         DialogueManager.Instance.playerController = null;
+        //AudioManager.Instance.playerController = null;
     }
 
     private void Update()
     {
-        if (canWalk)
-        {
+        if (canWalk){
             moveHorizontal = Input.GetAxis("Horizontal");
             moveVertical = Input.GetAxis("Vertical");
+        }else{
+            moveHorizontal = 0;
+            moveVertical = 0;
         }
         
-        Animations();
+        AnimationsAndSounds();
         
         if (Input.GetKey(KeyCode.LeftShift)) speed = sprintSpeed;
         else speed = moveSpeed;
 
-        if (Input.GetKeyDown(KeyCode.Space) && rb.velocity.y <= 0.01 && ctr <= 0f)
-        {
+        if (Input.GetKeyDown(KeyCode.Space) && rb.velocity.y <= 0.01 && ctr <= 0f){
             ctr = jumpDelay;
             jump = true;
             animator.SetBool("isJumping", true);
-        }
-        else if (ctr > 0f)
+        }else if (ctr > 0f)
         {
             ctr -= Time.deltaTime;
         }
     }
 
-    private void Animations()
+    private void AnimationsAndSounds()
     {
         if (canWalk == false)
         {
@@ -71,10 +73,14 @@ public class PlayerController : MonoBehaviour
         if (Mathf.Abs(moveHorizontal) > 0.1f || Mathf.Abs(moveVertical) > 0.1f)
         {
             animator.SetBool("isRunning", true);
+            isWalking = true;
+            //if(!AudioManager.Instance.isWalkingSoundPlaying) AudioManager.Instance.PlayWalkSound();
         }
         else
         {
             animator.SetBool("isRunning", false);
+            isWalking = false;
+            //AudioManager.Instance.StopWalkSound();
         }
     }
 

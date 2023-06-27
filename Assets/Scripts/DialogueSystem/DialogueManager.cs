@@ -13,12 +13,17 @@ public class DialogueManager : MonoBehaviour
     public Button[] optionButtons;
     public float typeSpeed;
     public PlayerController playerController;
+    [SerializeField] AudioClip[] textSounds;
+    [SerializeField] float minSoundWait, maxSoundWait;
+    float soudWaitCtr;
+    AudioSource audioSource;
 
     private DialogueData currentDialogue;
     bool skipDialogue, isDialogueStarted;
 
     void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         SingletonThisGameObject();
     }
 
@@ -89,6 +94,7 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator TypeDialogueText()
     {
+        soudWaitCtr = 0;
         dialogueText.text = string.Empty;
 
         float typeSpeed = 0.05f; // Yazma hızı
@@ -99,6 +105,7 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in currentDialogue.dialogueText)
         {
             dialogueText.text += letter;
+            PlayTextSound();
 
             elapsedTime += Time.deltaTime;
 
@@ -123,7 +130,17 @@ public class DialogueManager : MonoBehaviour
         isDialogueStarted = false;
     }
 
+    private void PlayTextSound()
+    {
+        soudWaitCtr -= Time.deltaTime;
 
+        if (soudWaitCtr <= 0)
+        {
+            soudWaitCtr = UnityEngine.Random.Range(minSoundWait, maxSoundWait);
+            var clip = textSounds[UnityEngine.Random.Range(0, textSounds.Length)];
+            audioSource.PlayOneShot(clip);
+        }
+    }
 
     private void ShowOptionButtons()
     {
