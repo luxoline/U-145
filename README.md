@@ -1,4 +1,4 @@
-# Takım İsmi
+# Takım Adı
 U-145
 # Proje ile İlgili Bilgiler
 ## Takım Rolleri
