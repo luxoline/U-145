@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 0
   m_EditorClassIdentifier: 
   questName: ilk gorev
-  questDescription: kirmizi npc ile konus
+  questDescription: npc ile konus
   questNumber: 0
   neededItemTag: 
   neededItemAmount: 0
-  questLocation: {x: 0, y: 0, z: 0}
+  questOwnerGameObjectName: NPC1
