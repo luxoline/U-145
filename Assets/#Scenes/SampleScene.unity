@@ -4087,6 +4087,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3373300363221227914, guid: e9df6f010e56ec34bb582b756f599c7e, type: 3}
   m_PrefabInstance: {fileID: 1858155025}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1197227972 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6831664686015653279, guid: e9df6f010e56ec34bb582b756f599c7e, type: 3}
+  m_PrefabInstance: {fileID: 1858155025}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34b331f16f0d68b42b75635d7c468f4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1199828593
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4878,6 +4889,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1307001983}
     m_Modifications:
+    - target: {fileID: 1870636734350877836, guid: 3728e54bfa256324a9d70e1bc75ea1ec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1197227972}
+    - target: {fileID: 2757174844573906351, guid: 3728e54bfa256324a9d70e1bc75ea1ec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1197227972}
     - target: {fileID: 3370742807005088998, guid: 3728e54bfa256324a9d70e1bc75ea1ec, type: 3}
       propertyPath: m_Name
       value: DialogueCanvas

@@ -54,6 +54,7 @@ public class DialogueManager : MonoBehaviour
         isDialogueStarted = true;
         dialogueCanvas.SetActive(true);
         currentDialogue = dialogueData;
+        InteractionCanvasManager.Instance.gameObject.SetActive(false);
         UpdateDialogUI();
     }
 
@@ -77,6 +78,8 @@ public class DialogueManager : MonoBehaviour
             {
                 dialogueCanvas.SetActive(false);
                 playerController.canWalk = true;
+                isDialogueStarted = false;
+                InteractionCanvasManager.Instance.gameObject.SetActive(true);
             }
         }
 
