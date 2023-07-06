@@ -19,12 +19,7 @@ public class QuestManager : MonoBehaviour
     void Awake()
     {
         SingletonThisGameObject();
-        if (currentQuest == null)
-        {
-            currentQuest = Resources.Load<Quest>("Quests/0");
-            Debug.Log(currentQuest.questDescription);
-            SetQuestText();
-        }
+        SetQuest(Resources.Load<Quest>("Quests/0"));
     }
 
     private void SingletonThisGameObject()
@@ -55,14 +50,19 @@ public class QuestManager : MonoBehaviour
         questText.text = "Current Quest:\n" + currentQuest.questDescription;
     }
 
-    public void SetQuest()
+    public void CompleteQuest()
     {
-        if (Resources.Load<Quest>("Quests/" + (currentQuest.questNumber + 1)) == null)
+        Debug.Log("Quest completed " + currentQuest.questNumber);
+
+        if (Resources.Load<Quest>("Quests/" + ((int)currentQuest.questNumber + 1).ToString()) == null)
         {
             Debug.Log("All quests completed");
             return;
         }
-        currentQuest = Resources.Load<Quest>("Quests/" + (currentQuest.questNumber + 1));
+        int num = currentQuest.questNumber + 1;
+        Debug.Log("Quest next " + num);
+        currentQuest = Resources.Load<Quest>("Quests/" + num.ToString());
+        //Debug.Log("Quest active " + currentQuest.questNumber);
         WaypointManager.Instance.SetTarget(GameObject.Find(currentQuest.questOwnerGameObjectName).transform);
         SetQuestText();
     }

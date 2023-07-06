@@ -9,6 +9,7 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager Instance { get; private set; }
 
     public GameObject dialogueCanvas;
+    public TMP_Text whoIsTalkingText;
     public TMP_Text dialogueText;
     public Button[] optionButtons;
     public float typeSpeed;
@@ -87,6 +88,7 @@ public class DialogueManager : MonoBehaviour
 
     private void UpdateDialogUI()
     {
+        whoIsTalkingText.text = currentDialogue.whoIsTalking;
         foreach (var btn in optionButtons)
         {
             btn.gameObject.SetActive(false);
@@ -126,7 +128,7 @@ public class DialogueManager : MonoBehaviour
         // Eğer ekrana tıklandıysa veya yazma süresi sona erdiyse yazıyı tamamlayın
         if (showAllText)
         {
-            dialogueText.text = currentDialogue.dialogueText; // Tüm yazıyı gösterin
+            dialogueText.text = currentDialogue.dialogueText;
         }
 
         ShowOptionButtons();

@@ -9,12 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a4774ca326bd2a4e92c9c6d7ddf0171, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b584cd1c3fdf2a429baa575c8ba7634, type: 3}
   m_Name: 1
   m_EditorClassIdentifier: 
-  questName: "M\u0131s\u0131r sulama"
-  questDescription: Misirlari sula (1/3)
-  questNumber: 1
-  neededItemTag: 
-  neededItemAmount: 0
-  questOwnerGameObjectName: Corn2
+  whoIsTalking: Cocuk
+  dialogueText: Iyi misiniz??
+  options:
+  - text: '>'
+    nextDialogue: {fileID: 11400000, guid: 338b95ba0b34df4438909568d0fbf3b7, type: 2}
+    quest: {fileID: 0}
+    isEndingOption: 0
