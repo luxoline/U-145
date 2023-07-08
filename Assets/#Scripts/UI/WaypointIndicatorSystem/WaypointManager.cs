@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -47,20 +47,25 @@ public class WaypointManager : MonoBehaviour
         {
             if (pos.x < Screen.width / 2)
             {
-                pos.x = maxX;
+                pos.x = Mathf.Clamp(pos.x, minX, maxX);
+                pos.y = maxY;
             }
             else
             {
-                pos.x = minX;
+                pos.x = Mathf.Clamp(pos.x, minX, maxX);
+                pos.y = minY;
             }
         }
-
-        pos.x = Mathf.Clamp(pos.x, minX, maxX);
-        pos.y = Mathf.Clamp(pos.y, minY, maxY);
+        else
+        {
+            pos.x = Mathf.Clamp(pos.x, minX, maxX);
+            pos.y = Mathf.Clamp(pos.y, minY, maxY);
+        }
 
         img.transform.position = pos;
         meter.text = ((int)Vector3.Distance(target.position, Camera.main.transform.position)).ToString() + "m";
     }
+
 
     public void SetTarget(Transform target)
     {
