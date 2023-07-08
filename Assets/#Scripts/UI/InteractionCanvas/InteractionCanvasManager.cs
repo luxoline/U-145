@@ -12,16 +12,20 @@ public class InteractionCanvasManager : MonoBehaviour
     public Image img;
     public Transform target;
     public Vector3 offset;
-
+    bool show = false;
 
     private void Awake()
     {
         SingletonThisGameObject();
-        this.gameObject.SetActive(false);
     }
 
     private void Update()
     {
+        if (!show) return;
+        if (target == null)
+        {
+            return;
+        }
         SetIndicatorPosition();
     }
 
@@ -56,6 +60,17 @@ public class InteractionCanvasManager : MonoBehaviour
     public void SetTarget(Transform target)
     {
         this.target = target;
+    }
+
+    public void EnableCanvas()
+    {
+        img.gameObject.SetActive(true);
+        show = true;
+    }
+    public void DisableCanvas()
+    {
+        img.gameObject.SetActive(false);
+        show = false;
     }
 
     private void SingletonThisGameObject()

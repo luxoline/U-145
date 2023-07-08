@@ -16,10 +16,13 @@ public class QuestManager : MonoBehaviour
     public List<string> questObjects = new List<string>();
     public List<int> completedQuests = new List<int>();
 
-    void Awake()
+    public GameObject[] deneme;
+
+    void Start()
     {
         SingletonThisGameObject();
-        SetQuest(Resources.Load<Quest>("Quests/0"));
+        //var firstQuest = Resources.Load<Quest>("Quests/0");
+        //SetQuest(firstQuest);
     }
 
     private void SingletonThisGameObject()
@@ -61,8 +64,7 @@ public class QuestManager : MonoBehaviour
         }
         int num = currentQuest.questNumber + 1;
         Debug.Log("Quest next " + num);
-        currentQuest = Resources.Load<Quest>("Quests/" + num.ToString());
-        //Debug.Log("Quest active " + currentQuest.questNumber);
+        if (currentQuest.goNextQuestAutomatically) currentQuest = Resources.Load<Quest>("Quests/" + num.ToString());
         WaypointManager.Instance.SetTarget(GameObject.Find(currentQuest.questOwnerGameObjectName).transform);
         SetQuestText();
     }
@@ -70,6 +72,7 @@ public class QuestManager : MonoBehaviour
     public void SetQuest(Quest quest)
     {
         currentQuest = quest;
+        WaypointManager.Instance.DisableCanvas();
         WaypointManager.Instance.SetTarget(GameObject.Find(currentQuest.questOwnerGameObjectName).transform);
         SetQuestText();
     }
@@ -85,5 +88,10 @@ public class QuestManager : MonoBehaviour
     public void CompleteCurrentQuest()
     {
         completedQuests.Add(currentQuest.questNumber);
+    }
+
+    public void DisableQuestCanvas()
+    {
+        questCanvas.SetActive(false);
     }
 }

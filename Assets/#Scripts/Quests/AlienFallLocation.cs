@@ -12,7 +12,7 @@ public class AlienFallLocation : MonoBehaviour
         {
             playerController.canWalk = false;
             DialogueManager.Instance.StartDialogue(Resources.Load<DialogueData>("Dialogues/Quests/AlienFallLocation/0"));
-            WaypointManager.Instance.gameObject.SetActive(false);
+            WaypointManager.Instance.DisableCanvas();
         }
     }
 }

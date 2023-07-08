@@ -18,3 +18,4 @@ MonoBehaviour:
   neededItemTag: 
   neededItemAmount: 0
   questOwnerGameObjectName: Corn1
+  goNextQuestAutomatically: 1

@@ -55,7 +55,8 @@ public class DialogueManager : MonoBehaviour
         isDialogueStarted = true;
         dialogueCanvas.SetActive(true);
         currentDialogue = dialogueData;
-        InteractionCanvasManager.Instance.gameObject.SetActive(false);
+        //QuestManager.Instance.DisableQuestCanvas();
+        //InteractionCanvasManager.Instance.gameObject.SetActive(false);
         UpdateDialogUI();
     }
 
@@ -80,7 +81,8 @@ public class DialogueManager : MonoBehaviour
                 dialogueCanvas.SetActive(false);
                 playerController.canWalk = true;
                 isDialogueStarted = false;
-                InteractionCanvasManager.Instance.gameObject.SetActive(true);
+                QuestManager.Instance.questCanvas.SetActive(true);
+                WaypointManager.Instance.EnableCanvas();
             }
         }
 
@@ -102,7 +104,7 @@ public class DialogueManager : MonoBehaviour
         soudWaitCtr = 0;
         dialogueText.text = string.Empty;
 
-        float typeSpeed = 0.05f; // Yazma hızı
+        float typeSpeed = 0.05f;
         float elapsedTime = 0f;
 
         bool showAllText = false;
@@ -110,11 +112,10 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in currentDialogue.dialogueText)
         {
             dialogueText.text += letter;
-            PlayTextSound();
+            if (currentDialogue.whoIsTalking != "Cocuk") PlayTextSound();
 
             elapsedTime += Time.deltaTime;
 
-            // Eğer ekrana tıklanırsa veya yazma süresi sona ererse döngüyü bitirin
             if (skipDialogue || elapsedTime >= typeSpeed * currentDialogue.dialogueText.Length)
             {
                 showAllText = true;
@@ -125,7 +126,6 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitForSeconds(typeSpeed);
         }
 
-        // Eğer ekrana tıklandıysa veya yazma süresi sona erdiyse yazıyı tamamlayın
         if (showAllText)
         {
             dialogueText.text = currentDialogue.dialogueText;
@@ -137,6 +137,7 @@ public class DialogueManager : MonoBehaviour
 
     private void PlayTextSound()
     {
+        if (currentDialogue.whoIsTalking == "cocuk") return;
         soudWaitCtr -= Time.deltaTime;
 
         if (soudWaitCtr <= 0)

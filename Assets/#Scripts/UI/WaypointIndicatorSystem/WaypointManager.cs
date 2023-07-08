@@ -13,6 +13,7 @@ public class WaypointManager : MonoBehaviour
     public Transform target;
     public TMP_Text meter;
     public Vector3 offset;
+    bool show = false;
 
     private void Awake()
     {
@@ -21,11 +22,19 @@ public class WaypointManager : MonoBehaviour
 
     private void Update()
     {
+        if (!show) return;
+        if (target == null) return;
         SetIndicatorPosition();
+    }
+
+    private void OnDisable()
+    {
+        Debug.Log("OnDisable");
     }
 
     private void SetIndicatorPosition()
     {
+        if (target == null) return;
         float minX = img.GetPixelAdjustedRect().width / 2;
         float maxX = Screen.width - minX;
 
@@ -34,7 +43,7 @@ public class WaypointManager : MonoBehaviour
 
         Vector2 pos = Camera.main.WorldToScreenPoint(target.position + offset);
 
-        if (Vector3.Dot((target.position - transform.position), transform.forward) < 0)
+        if (Vector3.Dot((target.position - Camera.main.transform.position), Camera.main.transform.forward) < 0)
         {
             if (pos.x < Screen.width / 2)
             {
@@ -56,6 +65,17 @@ public class WaypointManager : MonoBehaviour
     public void SetTarget(Transform target)
     {
         this.target = target;
+    }
+
+    public void EnableCanvas()
+    {
+        img.gameObject.SetActive(true);
+        show = true;
+    }
+    public void DisableCanvas()
+    {
+        img.gameObject.SetActive(false);
+        show = false;
     }
 
     private void SingletonThisGameObject()

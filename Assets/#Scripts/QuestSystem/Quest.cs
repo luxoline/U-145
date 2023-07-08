@@ -9,4 +9,5 @@ public class Quest : ScriptableObject
     public string neededItemTag = null;
     public int neededItemAmount = 0;
     public string questOwnerGameObjectName;
+    public bool goNextQuestAutomatically;
 }

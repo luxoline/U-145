@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8485700850539285745}
   m_Layer: 0
   m_Name: Corn1
-  m_TagString: Untagged
+  m_TagString: Quest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
