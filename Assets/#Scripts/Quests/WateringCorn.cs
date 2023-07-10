@@ -21,6 +21,7 @@ public class WateringCorn : MonoBehaviour
         if (finishedWatering) return;
         if (!closeToCorn) return;
         if (began) return;
+        if (QuestManager.Instance.currentQuest.questOwnerGameObjectName != gameObject.name) return;
         if (Input.GetKeyDown(KeyCode.E))
         {
             startedWatering = true;
@@ -30,6 +31,7 @@ public class WateringCorn : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (QuestManager.Instance.currentQuest.questOwnerGameObjectName != gameObject.name) return;
         if (finishedWatering) return;
         if (other.CompareTag("Player"))
         {
@@ -40,6 +42,7 @@ public class WateringCorn : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
+        if (QuestManager.Instance.currentQuest.questOwnerGameObjectName != gameObject.name) return;
         if (finishedWatering)
         {
             InteractionCanvasManager.Instance.DisableCanvas();
@@ -96,6 +99,7 @@ public class WateringCorn : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        if (QuestManager.Instance.currentQuest.questOwnerGameObjectName != gameObject.name) return;
         if (finishedWatering) return;
         closeToCorn = false;
         if (other.CompareTag("Player"))

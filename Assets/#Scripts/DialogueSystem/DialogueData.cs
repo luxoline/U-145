@@ -15,4 +15,5 @@ public class DialogOption
     public DialogueData nextDialogue;
     public Quest quest;
     public bool isEndingOption;
+    public bool isDisabled;
 }

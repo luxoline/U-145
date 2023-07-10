@@ -156,6 +156,8 @@ public class DialogueManager : MonoBehaviour
             {
                 optionButtons[i].gameObject.SetActive(true);
                 optionButtons[i].GetComponentInChildren<TMP_Text>().text = currentDialogue.options[i].text;
+                if (currentDialogue.options[i].isDisabled) optionButtons[i].interactable = false;
+                else optionButtons[i].interactable = true;
             }
             else
             {

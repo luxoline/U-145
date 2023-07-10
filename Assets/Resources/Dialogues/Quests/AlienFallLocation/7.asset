@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b584cd1c3fdf2a429baa575c8ba7634, type: 3}
-  m_Name: 6
+  m_Name: 7
   m_EditorClassIdentifier: 
   whoIsTalking: Uzayli
-  dialogueText: Ben de senin gibi bir canliyi ilk defa goruyorum. Bu gezegen bizimkinden
-    epey farkliymis.
+  dialogueText: Evet, baska bir gezegenden geliyorum. Bir arastirma gorevi icin uzay
+    boslugunda gezinirken birden aracim ariza yapti ve buraya dustum.
   options:
-  - text: Benim gezegenim mi? Sen farkli bir gezegenden mi geliyorsun?
-    nextDialogue: {fileID: 11400000, guid: 61b75bc770e6038429eb873e76ad211c, type: 2}
+  - text: '>'
+    nextDialogue: {fileID: 11400000, guid: fd863c6427a879b4198c024943dba9a7, type: 2}
     quest: {fileID: 0}
     isEndingOption: 0
     isDisabled: 0
