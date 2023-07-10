@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a4774ca326bd2a4e92c9c6d7ddf0171, type: 3}
   m_Name: 3
   m_EditorClassIdentifier: 
-  questName: yesil kupu getir
-  questDescription: yesil kupu getir
+  questName: "Uzayl\u0131y\u0131 incele"
+  questDescription: Gokten dusen cismi incele
   questNumber: 3
-  neededItemTag: yesil
-  neededItemAmount: 1
-  questLocation: {x: 0, y: 0, z: 0}
+  neededItemTag: 
+  neededItemAmount: 0
+  questOwnerGameObjectName: AlienFallLocation
