@@ -9,6 +9,7 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager Instance { get; private set; }
 
     public GameObject dialogueCanvas;
+    public TMP_Text whoIsTalkingText;
     public TMP_Text dialogueText;
     public Button[] optionButtons;
     public float typeSpeed;
@@ -54,6 +55,8 @@ public class DialogueManager : MonoBehaviour
         isDialogueStarted = true;
         dialogueCanvas.SetActive(true);
         currentDialogue = dialogueData;
+        //QuestManager.Instance.DisableQuestCanvas();
+        //InteractionCanvasManager.Instance.gameObject.SetActive(false);
         UpdateDialogUI();
     }
 
@@ -66,7 +69,7 @@ public class DialogueManager : MonoBehaviour
             
             if (selectedOption.quest != null)
             {
-                QuestManager.Instance.SetQuest();
+                QuestManager.Instance.SetQuest(selectedOption.quest);
             }
 
             if (selectedOption.nextDialogue != null)
@@ -77,6 +80,9 @@ public class DialogueManager : MonoBehaviour
             {
                 dialogueCanvas.SetActive(false);
                 playerController.canWalk = true;
+                isDialogueStarted = false;
+                QuestManager.Instance.questCanvas.SetActive(true);
+                WaypointManager.Instance.EnableCanvas();
             }
         }
 
@@ -84,6 +90,7 @@ public class DialogueManager : MonoBehaviour
 
     private void UpdateDialogUI()
     {
+        whoIsTalkingText.text = currentDialogue.whoIsTalking;
         foreach (var btn in optionButtons)
         {
             btn.gameObject.SetActive(false);
@@ -97,7 +104,7 @@ public class DialogueManager : MonoBehaviour
         soudWaitCtr = 0;
         dialogueText.text = string.Empty;
 
-        float typeSpeed = 0.05f; // Yazma hızı
+        float typeSpeed = 0.05f;
         float elapsedTime = 0f;
 
         bool showAllText = false;
@@ -105,11 +112,10 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in currentDialogue.dialogueText)
         {
             dialogueText.text += letter;
-            PlayTextSound();
+            if (currentDialogue.whoIsTalking != "Cocuk") PlayTextSound();
 
             elapsedTime += Time.deltaTime;
 
-            // Eğer ekrana tıklanırsa veya yazma süresi sona ererse döngüyü bitirin
             if (skipDialogue || elapsedTime >= typeSpeed * currentDialogue.dialogueText.Length)
             {
                 showAllText = true;
@@ -120,10 +126,9 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitForSeconds(typeSpeed);
         }
 
-        // Eğer ekrana tıklandıysa veya yazma süresi sona erdiyse yazıyı tamamlayın
         if (showAllText)
         {
-            dialogueText.text = currentDialogue.dialogueText; // Tüm yazıyı gösterin
+            dialogueText.text = currentDialogue.dialogueText;
         }
 
         ShowOptionButtons();
@@ -132,6 +137,7 @@ public class DialogueManager : MonoBehaviour
 
     private void PlayTextSound()
     {
+        if (currentDialogue.whoIsTalking == "cocuk") return;
         soudWaitCtr -= Time.deltaTime;
 
         if (soudWaitCtr <= 0)
@@ -150,6 +156,8 @@ public class DialogueManager : MonoBehaviour
             {
                 optionButtons[i].gameObject.SetActive(true);
                 optionButtons[i].GetComponentInChildren<TMP_Text>().text = currentDialogue.options[i].text;
+                if (currentDialogue.options[i].isDisabled) optionButtons[i].interactable = false;
+                else optionButtons[i].interactable = true;
             }
             else
             {

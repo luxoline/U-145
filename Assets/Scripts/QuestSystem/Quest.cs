@@ -8,5 +8,6 @@ public class Quest : ScriptableObject
     public int questNumber = 0;
     public string neededItemTag = null;
     public int neededItemAmount = 0;
-    public Vector3 questLocation = Vector3.zero;
+    public string questOwnerGameObjectName;
+    public bool goNextQuestAutomatically;
 }

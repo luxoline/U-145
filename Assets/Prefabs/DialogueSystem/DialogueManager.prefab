@@ -53,13 +53,11 @@ MonoBehaviour:
   typeSpeed: 0.05
   playerController: {fileID: 0}
   textSounds:
-  - {fileID: 8300000, guid: 226efbc0576557e4b8eefceed5c098f0, type: 3}
-  - {fileID: 8300000, guid: d8579384879703f4890cc1ba834373d0, type: 3}
-  - {fileID: 8300000, guid: b63b65952fcef61499b33c166f700ac9, type: 3}
-  - {fileID: 8300000, guid: fcec386ddbcde084887f4a89ca9533ce, type: 3}
-  - {fileID: 8300000, guid: 1449847aff4cbd94fbc954c5e6162704, type: 3}
-  minSoundWait: 0.01
-  maxSoundWait: 0.03
+  - {fileID: 8300000, guid: eb18265e93c17f148883f23d90ea9f2b, type: 3}
+  - {fileID: 8300000, guid: a9d6a5d49b7ac2947b25bc81ed6f6139, type: 3}
+  - {fileID: 8300000, guid: 32f43a20ced112a47bb110ba9b5aee28, type: 3}
+  minSoundWait: 0.1
+  maxSoundWait: 0.2
 --- !u!82 &231592028203982642
 AudioSource:
   m_ObjectHideFlags: 0

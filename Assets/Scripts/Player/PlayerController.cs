@@ -38,6 +38,8 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (Camera.main == null) return;
+
         if (canWalk){
             moveHorizontal = Input.GetAxis("Horizontal");
             moveVertical = Input.GetAxis("Vertical");
@@ -65,7 +67,6 @@ public class PlayerController : MonoBehaviour
     {
         if (canWalk == false)
         {
-            Debug.Log("yurumemesi lazim");
             animator.SetBool("isRunning",false);
             animator.SetBool("isJumping", false);
         }
@@ -74,27 +75,30 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("isRunning", true);
             isWalking = true;
-            //if(!AudioManager.Instance.isWalkingSoundPlaying) AudioManager.Instance.PlayWalkSound();
         }
         else
         {
             animator.SetBool("isRunning", false);
             isWalking = false;
-            //AudioManager.Instance.StopWalkSound();
         }
     }
 
     private void FixedUpdate()
     {
+        if (Camera.main == null) return;
         Movement();
     }
 
     private void Movement()
     {
         if (!canWalk) return;
-        Vector3 moveDirection = new Vector3(moveHorizontal, 0f, moveVertical).normalized;
+        var z = Camera.main.transform.forward * moveVertical;
+        var x = Camera.main.transform.right * moveHorizontal;
 
-        rb.velocity = new Vector3(moveDirection.x * speed, rb.velocity.y, moveDirection.z * speed);
+        Vector3 moveDirection = x + z;
+        moveDirection.y = 0f;
+
+        rb.velocity = new Vector3(moveDirection.x * speed * Time.deltaTime, rb.velocity.y, moveDirection.z * speed * Time.deltaTime);
 
 
 

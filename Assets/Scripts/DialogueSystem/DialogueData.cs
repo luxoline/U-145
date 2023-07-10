@@ -3,6 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Dialogue Data", menuName = "Dialogue", order = 2)]
 public class DialogueData : ScriptableObject
 {
+    public string whoIsTalking;
     public string dialogueText;
     public DialogOption[] options;
 }
@@ -14,4 +15,5 @@ public class DialogOption
     public DialogueData nextDialogue;
     public Quest quest;
     public bool isEndingOption;
+    public bool isDisabled;
 }
