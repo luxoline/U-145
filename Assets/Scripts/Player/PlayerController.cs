@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
 
 
     //karakter değişimi yapılırken önce aktif olan karakter disable edilip sonra diğer karakter enable edilmeli
-    private void OnEnable()
+    /*private void OnEnable()
     {
         canWalk = true;
         DialogueManager.Instance.playerController = this;
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
         canWalk = false;
         DialogueManager.Instance.playerController = null;
         //AudioManager.Instance.playerController = null;
-    }
+    }*/
 
     private void Update()
     {

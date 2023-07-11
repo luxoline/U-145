@@ -26,8 +26,8 @@ public class NpcController : MonoBehaviour
         MoveNpc();
         /*Debug.Log((int)transform.position.x == (int)PathPoints[PathPoints.Length - 1].transform.position.x);
         Debug.Log("Kadýn: "+ transform.position.x);
-        Debug.Log("Nokta: "+ PathPoints[PathPoints.Length - 1].transform.position.x);*/
-        Debug.Log(Vector3.Distance(transform.position, PathPoints[index].transform.position));
+        Debug.Log("Nokta: "+ PathPoints[PathPoints.Length - 1].transform.position.x);
+        Debug.Log(Vector3.Distance(transform.position, PathPoints[index].transform.position));*/
 
     }
 

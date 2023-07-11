@@ -8,19 +8,22 @@ public class NPC_Interaction : MonoBehaviour
 
     bool canTalk = false;
     public int npcQuestNumber = 1;
-
+    private GameObject npc;
+    public GameObject lookAt;
 
     private void Start()
     {
-        
+        this.npc = transform.parent.gameObject;
     }
 
-    // Update is called once per frame
     void Update()
     {
+        //Debug.Log(npc.GetComponent<Animator>().GetFloat("vertical"));
 
         if (canTalk && Input.GetKeyDown(KeyCode.E))
         {
+            npc.GetComponent<Animator>().SetFloat("vertical", 1);
+            npc.transform.LookAt(lookAt.transform);
             if (QuestManager.Instance.IsCurrentQuest(npcQuestNumber))
             {
                 if (QuestManager.Instance.CheckQuestObjects())
