@@ -13,13 +13,15 @@ MonoBehaviour:
   m_Name: 4
   m_EditorClassIdentifier: 
   whoIsTalking: Uzayli
-  dialogueText: Ben de senin gibi bir canliyim.
+  dialogueText: ...
   options:
-  - text: Ama benden farkli gorunuyorsun?
+  - text: "Gecenin bu saatinde g\xF6kten nas\u0131l d\xFC\u015Ft\xFCn b\xF6yle?"
     nextDialogue: {fileID: 11400000, guid: 135510229ac5abe458517bcbb3f95f34, type: 2}
     quest: {fileID: 0}
     isEndingOption: 0
-  - text: Senin gibi bir canliyi ilk defa goruyorum.
-    nextDialogue: {fileID: 11400000, guid: 14113957bfd4d71409a338849a86e242, type: 2}
+    isDisabled: 0
+  - text: Beni duyuyor musun?
+    nextDialogue: {fileID: 0}
     quest: {fileID: 0}
     isEndingOption: 0
+    isDisabled: 1

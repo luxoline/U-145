@@ -8,10 +8,16 @@ public class Alien : MonoBehaviour
 
     [SerializeField] GameObject alienPrefab;
 
+    [SerializeField] GameObject tempPlayer, mainPlayer;
+
     void FinishAlienFallCutScene()
     {
+        var pos = transform.position;
+        mainPlayer.SetActive(true);
+        tempPlayer.SetActive(false);
         mainCamera.gameObject.SetActive(true);
         ufoFallCutSceneCamera.gameObject.SetActive(false);
+        this.gameObject.SetActive(false);
         alienPrefab.SetActive(true);
         WaypointManager.Instance.DisableCanvas();
         DialogueManager.Instance.StartDialogue(Resources.Load<DialogueData>("Dialogues/Quests/UFOFallCutScene/0"));

@@ -16,4 +16,5 @@ public class DialogOption
     public Quest quest;
     public bool isEndingOption;
     public bool isDisabled;
+    public string onclickGameObjectName;
 }

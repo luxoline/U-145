@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     float speed;
 
     Rigidbody rb;
-    Animator animator;
+    public Animator animator;
 
     float moveHorizontal, moveVertical, ctr;
     bool jump;
@@ -46,6 +46,8 @@ public class PlayerController : MonoBehaviour
         }else{
             moveHorizontal = 0;
             moveVertical = 0;
+            animator.SetBool("isRunning",false);
+            animator.SetBool("isJumping", false);
         }
         
         AnimationsAndSounds();

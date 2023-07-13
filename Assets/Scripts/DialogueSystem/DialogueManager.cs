@@ -8,6 +8,8 @@ public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance { get; private set; }
 
+    [SerializeField] bool playSoundOnText;
+    [SerializeField] GameObject mainCamera;
     public GameObject dialogueCanvas;
     public TMP_Text whoIsTalkingText;
     public TMP_Text dialogueText;
@@ -16,8 +18,12 @@ public class DialogueManager : MonoBehaviour
     public PlayerController playerController;
     [SerializeField] AudioClip[] textSounds;
     [SerializeField] float minSoundWait, maxSoundWait;
+    [SerializeField] bool waitBetweenSounds;
     float soudWaitCtr;
     AudioSource audioSource;
+
+    [SerializeField] float disabledR, disabledG, disabledB;
+    [SerializeField] float enabledR, enabledG, enabledB;
 
     private DialogueData currentDialogue;
     bool skipDialogue, isDialogueStarted;
@@ -51,6 +57,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(DialogueData dialogueData)
     {
+        playerController.animator.SetBool("pass", false);
         playerController.canWalk = false;
         isDialogueStarted = true;
         dialogueCanvas.SetActive(true);
@@ -83,6 +90,14 @@ public class DialogueManager : MonoBehaviour
                 isDialogueStarted = false;
                 QuestManager.Instance.questCanvas.SetActive(true);
                 WaypointManager.Instance.EnableCanvas();
+                Camera.main.gameObject.SetActive(false);
+                mainCamera.SetActive(true);
+                playerController.animator.SetBool("pass", true);
+            }
+            var goName = selectedOption.onclickGameObjectName;
+            if (goName != "" || goName != null)
+            {
+                GameObject.Find(goName).transform.GetChild(0).gameObject.SetActive(true);
             }
         }
 
@@ -112,7 +127,7 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in currentDialogue.dialogueText)
         {
             dialogueText.text += letter;
-            if (currentDialogue.whoIsTalking != "Cocuk") PlayTextSound();
+            if (playSoundOnText) PlayTextSound();
 
             elapsedTime += Time.deltaTime;
 
@@ -138,15 +153,27 @@ public class DialogueManager : MonoBehaviour
     private void PlayTextSound()
     {
         if (currentDialogue.whoIsTalking == "cocuk") return;
-        soudWaitCtr -= Time.deltaTime;
 
-        if (soudWaitCtr <= 0)
+
+        var clip = textSounds[UnityEngine.Random.Range(0, textSounds.Length)];
+
+        if (waitBetweenSounds)
         {
-            soudWaitCtr = UnityEngine.Random.Range(minSoundWait, maxSoundWait);
-            var clip = textSounds[UnityEngine.Random.Range(0, textSounds.Length)];
-            audioSource.PlayOneShot(clip);
+            soudWaitCtr -= Time.deltaTime;
+
+            if (soudWaitCtr <= 0)
+            {
+                soudWaitCtr = UnityEngine.Random.Range(minSoundWait, maxSoundWait);
+                audioSource.PlayOneShot(clip);
+            }
+            return;
         }
+
+        audioSource.volume = 0.5f;
+        audioSource.PlayOneShot(clip);
+        audioSource.volume = 1f;
     }
+
 
     private void ShowOptionButtons()
     {
@@ -156,8 +183,18 @@ public class DialogueManager : MonoBehaviour
             {
                 optionButtons[i].gameObject.SetActive(true);
                 optionButtons[i].GetComponentInChildren<TMP_Text>().text = currentDialogue.options[i].text;
-                if (currentDialogue.options[i].isDisabled) optionButtons[i].interactable = false;
-                else optionButtons[i].interactable = true;
+                if (currentDialogue.options[i].isDisabled){
+                    optionButtons[i].interactable = false;
+                    var colors = optionButtons[i].colors;
+                    colors.normalColor = new Color(disabledR, disabledG, disabledB);
+                    optionButtons[i].colors = colors;
+                }
+                else{
+                    optionButtons[i].interactable = true;
+                    var colors = optionButtons[i].colors;
+                    colors.normalColor = new Color(enabledR, enabledG, enabledB);
+                    optionButtons[i].colors = colors;
+                }
             }
             else
             {

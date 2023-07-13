@@ -3384,7 +3384,7 @@ Animator:
   m_GameObject: {fileID: 7931340570421280886}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 28fa0d0210683d94b8c6ad0282b435e3, type: 2}
+  m_Controller: {fileID: 9100000, guid: 121ec47b13cb6b04d934f5598cdd24fe, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3462,6 +3462,7 @@ MonoBehaviour:
   rotationSmoothness: 0.2
   jumpSpeed: 200
   jumpDelay: 1.5
+  animator: {fileID: 0}
   canWalk: 1
   isWalking: 0
 --- !u!114 &6357652103379965489
@@ -3590,6 +3591,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa1f1a86a87a55747b3c7a4683b41811, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCamera: {fileID: 0}
+  ufoFallCutSceneCamera: {fileID: 0}
+  ufo: {fileID: 0}
 --- !u!1 &8051494838864824478
 GameObject:
   m_ObjectHideFlags: 0

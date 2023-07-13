@@ -45,7 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34b331f16f0d68b42b75635d7c468f4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playSoundOnText: 1
+  mainCamera: {fileID: 0}
   dialogueCanvas: {fileID: 0}
+  whoIsTalkingText: {fileID: 0}
   dialogueText: {fileID: 0}
   optionButtons:
   - {fileID: 0}
@@ -53,11 +56,16 @@ MonoBehaviour:
   typeSpeed: 0.05
   playerController: {fileID: 0}
   textSounds:
-  - {fileID: 8300000, guid: eb18265e93c17f148883f23d90ea9f2b, type: 3}
-  - {fileID: 8300000, guid: a9d6a5d49b7ac2947b25bc81ed6f6139, type: 3}
-  - {fileID: 8300000, guid: 32f43a20ced112a47bb110ba9b5aee28, type: 3}
+  - {fileID: 8300000, guid: ad12fd3a426da0c4989d9d38680bf13a, type: 3}
   minSoundWait: 0.1
   maxSoundWait: 0.2
+  waitBetweenSounds: 0
+  disabledR: 132
+  disabledG: 69
+  disabledB: 69
+  enabledR: 0
+  enabledG: 142
+  enabledB: 96
 --- !u!82 &231592028203982642
 AudioSource:
   m_ObjectHideFlags: 0

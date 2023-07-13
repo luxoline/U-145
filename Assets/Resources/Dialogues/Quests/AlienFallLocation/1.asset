@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: 1
   m_EditorClassIdentifier: 
   whoIsTalking: Cocuk
-  dialogueText: Iyi misiniz??
+  dialogueText: "Sen de nesin? \xC7ok farkl\u0131 g\xF6r\xFCn\xFCyorsun."
   options:
   - text: '>'
     nextDialogue: {fileID: 11400000, guid: 338b95ba0b34df4438909568d0fbf3b7, type: 2}
     quest: {fileID: 0}
     isEndingOption: 0
+    isDisabled: 0

@@ -21,6 +21,7 @@ public class QuestManager : MonoBehaviour
     void Start()
     {
         SingletonThisGameObject();
+        DisableQuestCanvas();
         //var firstQuest = Resources.Load<Quest>("Quests/0");
         //SetQuest(firstQuest);
     }

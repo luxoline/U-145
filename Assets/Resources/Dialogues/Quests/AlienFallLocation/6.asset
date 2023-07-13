@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b584cd1c3fdf2a429baa575c8ba7634, type: 3}
   m_Name: 6
   m_EditorClassIdentifier: 
-  whoIsTalking: Uzayli
-  dialogueText: Ben de senin gibi bir canliyi ilk defa goruyorum. Bu gezegen bizimkinden
-    epey farkliymis.
+  whoIsTalking: Cocuk
+  dialogueText: "Pekala\u2026Benim ad\u0131m Hasan\u2026G\xF6kten d\xFC\u015Fen teknen
+    de sa\u011Flam durmuyor gibi. Haydi benimle gel, so\u011Fukta durma."
   options:
-  - text: Benim gezegenim mi? Sen farkli bir gezegenden mi geliyorsun?
-    nextDialogue: {fileID: 11400000, guid: 61b75bc770e6038429eb873e76ad211c, type: 2}
-    quest: {fileID: 0}
-    isEndingOption: 0
+  - text: '> *eve git questi*'
+    nextDialogue: {fileID: 0}
+    quest: {fileID: 11400000, guid: 96a60796edb4c6a42b3be8553345a93f, type: 2}
+    isEndingOption: 1
     isDisabled: 0
+    onclickGameObjectName: Alien

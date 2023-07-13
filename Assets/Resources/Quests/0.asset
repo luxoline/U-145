@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a4774ca326bd2a4e92c9c6d7ddf0171, type: 3}
   m_Name: 0
   m_EditorClassIdentifier: 
-  questName: "M\u0131s\u0131r sulama"
-  questDescription: Misirlari sula (0/3)
+  questName: "Uzayl\u0131y\u0131 incele"
+  questDescription: Gokten dusen cismi incele
   questNumber: 0
   neededItemTag: 
   neededItemAmount: 0
-  questOwnerGameObjectName: Corn1
-  goNextQuestAutomatically: 1
+  questOwnerGameObjectName: AlienFallLocation
+  goNextQuestAutomatically: 0

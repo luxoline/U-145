@@ -13,9 +13,15 @@ MonoBehaviour:
   m_Name: 3
   m_EditorClassIdentifier: 
   whoIsTalking: Uzayli
-  dialogueText: M-merhaba. Yere biraz sert dustum ama bir sorunum yok.
+  dialogueText: ...
   options:
-  - text: Sen kimsin? Ya da sen nesin diye mi sormaliyim?
-    nextDialogue: {fileID: 11400000, guid: aecaca63b4447e54fb362a2fb1212af6, type: 2}
+  - text: "Gecenin bu saatinde g\xF6kten nas\u0131l d\xFC\u015Ft\xFCn b\xF6yle?"
+    nextDialogue: {fileID: 0}
     quest: {fileID: 0}
     isEndingOption: 0
+    isDisabled: 1
+  - text: Beni duyuyor musun?
+    nextDialogue: {fileID: 11400000, guid: 135510229ac5abe458517bcbb3f95f34, type: 2}
+    quest: {fileID: 0}
+    isEndingOption: 0
+    isDisabled: 0
