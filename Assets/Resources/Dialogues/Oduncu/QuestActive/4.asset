@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b584cd1c3fdf2a429baa575c8ba7634, type: 3}
+  m_Name: 4
+  m_EditorClassIdentifier: 
+  whoIsTalking: Oduncu
+  dialogueText: "Hay\u0131rd\u0131r in\u015Fallah sen neden geldin ola, odun mu laz\u0131m
+    oldu?"
+  options:
+  - text: "Evet ak\u015Famlar\u0131 so\u011Fuk oluyor, babaannem de yakamaz oldu
+      ben yak\u0131yorum sobay\u0131."
+    nextDialogue: {fileID: 11400000, guid: 55167c7bda1d2c74194a414842752e6a, type: 2}
+    quest: {fileID: 0}
+    isEndingOption: 0
+    isDisabled: 0
+    onclickGameObjectName: 

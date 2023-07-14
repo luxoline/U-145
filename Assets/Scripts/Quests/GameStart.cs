@@ -4,20 +4,30 @@ using UnityEngine;
 
 public class GameStart : MonoBehaviour
 {
-    [SerializeField] GameObject ufo, player;
+    [SerializeField] GameObject ufoFallCamera;
     void Start()
     {
         InteractionCanvasManager.Instance.DisableCanvas();
         WaypointManager.Instance.DisableCanvas();
-        QuestManager.Instance.DisableQuestCanvas();
+        //QuestManager.Instance.DisableQuestCanvas();
+        StartCoroutine(StartSubtitles());
     }
 
     public void UfoFall()
     {
-        //var dd = Resources.Load<DialogueData>("Dialogues/GameStart/0");
-        //DialogueManager.Instance.StartDialogue(dd);
-        ufo.SetActive(true);
-        player.GetComponent<Animator>().SetBool("turn", true);
-        player.transform.GetChild(0).GetComponent<Animator>().SetTrigger("idle");
+        ufoFallCamera.GetComponent<Animator>().SetBool("fall", true);
+    }
+
+    IEnumerator StartSubtitles()
+    {
+        var dd = Resources.LoadAll<DialogueData>("Subtitles/GameStart");
+        foreach (var d in dd)
+        {
+            Debug.Log(d.dialogueText);
+            SubtitleManager.Instance.StartSubtitle(d.dialogueText);
+            yield return new WaitForSeconds(d.dialogueText.Length * SubtitleManager.Instance.subtitleTime);
+        }
+        SubtitleManager.Instance.DisableCanvas();
+        UfoFall();
     }
 }

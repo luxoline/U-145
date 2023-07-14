@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b584cd1c3fdf2a429baa575c8ba7634, type: 3}
+  m_Name: 5
+  m_EditorClassIdentifier: 
+  whoIsTalking: Cocuk
+  dialogueText: "Beni anl\u0131yor musun ki konu\u015Fuyorum\u2026"
+  options:
+  - text: '>'
+    nextDialogue: {fileID: 0}
+    quest: {fileID: 11400000, guid: f91d7a3c7f067254185af78b39c38347, type: 2}
+    isEndingOption: 1
+    isDisabled: 0
+    onclickGameObjectName: 0

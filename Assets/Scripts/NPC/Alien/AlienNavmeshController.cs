@@ -22,13 +22,16 @@ public class AlienNavmeshController : MonoBehaviour
 
         if (!canMove){
             navMeshAgent.isStopped = true;
+            var lookPos = navMeshAgent.destination;
+            lookPos.y = transform.position.y;
+            transform.LookAt(lookPos);
             return;
         }
 
         var dest = GameObject.FindGameObjectWithTag("Player").transform.position;
         dest.y = transform.position.y;
         var dist = Vector3.Distance(transform.position, dest);
-        Debug.Log(GameObject.FindGameObjectWithTag("Player").name);
+
         if (dist <= maxDistance)
         {
             navMeshAgent.isStopped = true;

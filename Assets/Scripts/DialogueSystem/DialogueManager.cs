@@ -95,8 +95,9 @@ public class DialogueManager : MonoBehaviour
                 playerController.animator.SetBool("pass", true);
             }
             var goName = selectedOption.onclickGameObjectName;
-            if (goName != "" || goName != null)
+            if (goName != "0")
             {
+                Debug.Log("goName: " + goName);
                 GameObject.Find(goName).transform.GetChild(0).gameObject.SetActive(true);
             }
         }

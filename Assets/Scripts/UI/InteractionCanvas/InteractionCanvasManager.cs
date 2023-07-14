@@ -16,7 +16,8 @@ public class InteractionCanvasManager : MonoBehaviour
 
     private void Awake()
     {
-        SingletonThisGameObject();
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Update()
@@ -73,16 +74,4 @@ public class InteractionCanvasManager : MonoBehaviour
         show = false;
     }
 
-    private void SingletonThisGameObject()
-    {
-        if (Instance != null)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-    }
 }

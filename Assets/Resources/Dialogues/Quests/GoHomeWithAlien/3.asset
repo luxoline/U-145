@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b584cd1c3fdf2a429baa575c8ba7634, type: 3}
+  m_Name: 3
+  m_EditorClassIdentifier: 
+  whoIsTalking: Cocuk
+  dialogueText: "Kasabadan odun almaya gitmem gerekiyor. Sen burada kal b\xFCy\xFCkannem
+    hasta l\xFCtfen onu rahats\u0131z etme."
+  options:
+  - text: '>'
+    nextDialogue: {fileID: 11400000, guid: 54723f7b0b9873d44986ed58acb519fe, type: 2}
+    quest: {fileID: 0}
+    isEndingOption: 0
+    isDisabled: 0
+    onclickGameObjectName: 0
