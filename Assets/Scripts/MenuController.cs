@@ -12,11 +12,6 @@ public class MenuController : MonoBehaviour
     [SerializeField] private Slider volumeSlider = null;
     [SerializeField] private GameObject confirmationPrompt;
     [SerializeField] private float defaultVolume = 1.0f;
-    public GameObject menuScene;
-    public GameObject optionsScene;
-    public GameObject mainMenuCanvas;
-    public GameObject marketCanvas;
-    public GameObject marketItems;
 
     public void StartGame()
     {
@@ -51,13 +46,6 @@ public class MenuController : MonoBehaviour
         confirmationPrompt.SetActive(true);
         yield return new WaitForSeconds(2);
         confirmationPrompt.SetActive(false);
-    }
-    public void Market()
-    {
-        mainMenuCanvas.SetActive(false);
-        marketItems.SetActive(true);
-        marketCanvas.SetActive(true);
-        
     }
     public void Credits()
     {
