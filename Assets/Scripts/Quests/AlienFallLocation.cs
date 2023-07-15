@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AlienFallLocation : MonoBehaviour
 {
-    [SerializeField] GameObject mainCamera, dialogueCamera;
+    [SerializeField] GameObject mainCamera, dialogueCamera, alien;
 
     [SerializeField] int questNumber;
     private void OnTriggerEnter(Collider other)
@@ -17,10 +17,11 @@ public class AlienFallLocation : MonoBehaviour
 
             playerController.canWalk = false;
             playerController.GetComponent<Rigidbody>().velocity = Vector3.zero;
-            playerController.GetComponent<Animator>().SetTrigger("idle");
+            playerController.GetComponentInChildren<Animator>().SetTrigger("idle");
             var lookPos = transform.position;
             lookPos.y = playerController.transform.position.y;
             playerController.transform.LookAt(lookPos);
+            alien.GetComponent<Animator>().SetBool("standUp", true);
             DialogueManager.Instance.StartDialogue(Resources.Load<DialogueData>("Dialogues/Quests/AlienFallLocation/0"));
             WaypointManager.Instance.DisableCanvas();
             QuestManager.Instance.DisableQuestCanvas();

@@ -13,12 +13,13 @@ public class PlayerController : MonoBehaviour
     bool jump;
     public bool canWalk, isWalking;
 
+    [SerializeField] GameObject playerObj, orientation;
     private void Awake()
     {
         DialogueManager.Instance.playerController = this;
         ctr = 0;
         rb = GetComponent<Rigidbody>();
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
     }
 
 
@@ -106,8 +107,7 @@ public class PlayerController : MonoBehaviour
 
         if (moveDirection != Vector3.zero)
         {
-            Quaternion toRotation = Quaternion.LookRotation(moveDirection, Vector3.up);
-            transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, rotationSmoothness);
+            playerObj.transform.forward = Vector3.Slerp(playerObj.transform.forward, moveDirection, Time.deltaTime * rotationSmoothness);
         }
 
         if (jump)

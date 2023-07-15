@@ -6,13 +6,14 @@ using UnityEngine.AI;
 public class AlienNavmeshController : MonoBehaviour
 {
     NavMeshAgent navMeshAgent;
-
+    Animator animator;
     public bool canMove = false;
     [SerializeField] float maxDistance;
     // Start is called before the first frame update
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -22,6 +23,7 @@ public class AlienNavmeshController : MonoBehaviour
 
         if (!canMove){
             navMeshAgent.isStopped = true;
+            animator.SetBool("isRunning", false);
             var lookPos = navMeshAgent.destination;
             lookPos.y = transform.position.y;
             transform.LookAt(lookPos);
@@ -35,10 +37,12 @@ public class AlienNavmeshController : MonoBehaviour
         if (dist <= maxDistance)
         {
             navMeshAgent.isStopped = true;
+            animator.SetBool("isRunning", false);
         }
         else
         {
             navMeshAgent.isStopped = false;
+            animator.SetBool("isRunning", true);
             SetDestination(dest);
         }
     }
