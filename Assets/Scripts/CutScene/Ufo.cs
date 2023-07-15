@@ -1,28 +1,31 @@
+﻿using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Ufo : MonoBehaviour
 {
-    [SerializeField] GameObject alien, ufoPrefab;
-    [SerializeField] GameObject mainCamera, ufoFallCutSceneCamera;
+    [SerializeField] GameObject alien, ufoPrefab, tempPlayer;
+    [SerializeField] GameObject ufoFallCutSceneCamera;
 
     private void Start()
     {
-        mainCamera.SetActive(false);
+        //mainCamera.SetActive(false);
         ufoFallCutSceneCamera.SetActive(true);
         InteractionCanvasManager.Instance.DisableCanvas();
         WaypointManager.Instance.DisableCanvas();
         QuestManager.Instance.DisableQuestCanvas();
     }
-    void AlienFall()
-    {
-        alien.SetActive(true);
-    }
 
     void FinishUfoFallCutScene()
     {
+        alien.SetActive(true);
         ufoPrefab.SetActive(true);
-        Destroy(gameObject);
+        DialogueManager.Instance.StartDialogue(Resources.Load<DialogueData>("Dialogues/Quests/UFOFallCutScene/0"));
+        ufoFallCutSceneCamera.SetActive(false);
+        tempPlayer.SetActive(false);
     }
+
+    
+
 }

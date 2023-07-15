@@ -9,7 +9,7 @@ public class GoHomeWithAlien : MonoBehaviour
     public int questNumber = 1;
     bool dialogueStarted = false;
 
-    [SerializeField] GameObject mainCamera, dialogueCamera, player, alien;
+    [SerializeField] GameObject dialogueCamera, player, alien;
 
     private void OnTriggerStay(Collider other)
     {
@@ -30,11 +30,12 @@ public class GoHomeWithAlien : MonoBehaviour
         var playerController = player.GetComponent<PlayerController>();
         playerController.canWalk = false;
         playerController.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        playerController.GetComponent<Animator>().SetTrigger("idle");
+        playerController.GetComponentInChildren<Animator>().SetTrigger("idle");
 
         var playerLookPos = alien.transform.position;
         playerLookPos.y = playerController.transform.position.y;
         playerController.transform.LookAt(playerLookPos);
+        playerController.transform.GetChild(0).LookAt(playerLookPos);
 
         var alienLookPos = player.transform.position;
         alienLookPos.y = alien.transform.position.y;
@@ -47,7 +48,6 @@ public class GoHomeWithAlien : MonoBehaviour
 
         WaypointManager.Instance.DisableCanvas();
         QuestManager.Instance.DisableQuestCanvas();
-        mainCamera.SetActive(false);
         dialogueCamera.SetActive(true);
     }
 

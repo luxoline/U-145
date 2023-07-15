@@ -15,7 +15,7 @@ public class Alien : MonoBehaviour
         var pos = transform.position;
         mainPlayer.SetActive(true);
         tempPlayer.SetActive(false);
-        mainCamera.gameObject.SetActive(true);
+        
         ufoFallCutSceneCamera.gameObject.SetActive(false);
         this.gameObject.SetActive(false);
         alienPrefab.SetActive(true);
@@ -25,4 +25,5 @@ public class Alien : MonoBehaviour
         QuestManager.Instance.questText.text = "";
         //Destroy(gameObject);
     }
+
 }

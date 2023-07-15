@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class AlienFallLocation : MonoBehaviour
 {
-    [SerializeField] GameObject mainCamera, dialogueCamera, alien;
+    [SerializeField] GameObject dialogueCamera, alien;
 
     [SerializeField] int questNumber;
     private void OnTriggerEnter(Collider other)
     {
-        var playerController = other.GetComponent<PlayerController>();
+        
 
         if (other.CompareTag("Player"))
         {
             if (!QuestManager.Instance.IsCurrentQuest(questNumber)) return;
-
+            var playerController = other.GetComponent<PlayerController>();
             playerController.canWalk = false;
             playerController.GetComponent<Rigidbody>().velocity = Vector3.zero;
             playerController.GetComponentInChildren<Animator>().SetTrigger("idle");
@@ -22,10 +22,9 @@ public class AlienFallLocation : MonoBehaviour
             lookPos.y = playerController.transform.position.y;
             playerController.transform.LookAt(lookPos);
             alien.GetComponent<Animator>().SetBool("standUp", true);
-            DialogueManager.Instance.StartDialogue(Resources.Load<DialogueData>("Dialogues/Quests/AlienFallLocation/0"));
+            DialogueManager.Instance.StartDialogue(Resources.Load<DialogueData>("Dialogues/Quests/deneme/0"));
             WaypointManager.Instance.DisableCanvas();
             QuestManager.Instance.DisableQuestCanvas();
-            mainCamera.SetActive(false);
             dialogueCamera.SetActive(true);
         }
     }

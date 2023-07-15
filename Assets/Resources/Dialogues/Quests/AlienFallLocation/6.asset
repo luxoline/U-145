@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whoIsTalking: Cocuk
   dialogueText: "Pekala\u2026Benim ad\u0131m Hasan\u2026G\xF6kten d\xFC\u015Fen teknen
-    de sa\u011Flam durmuyor gibi. Haydi benimle gel, so\u011Fukta durma."
+    de sa\u011Flam durmuyor gibi. Haydi benimle gel, so\u011Fukta durma. Teknenle
+    daha sonra ilgileniriz."
   options:
   - text: '> *eve git questi*'
     nextDialogue: {fileID: 0}

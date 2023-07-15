@@ -6,16 +6,22 @@ using UnityEngine.AI;
 
 public class ReturnHome : MonoBehaviour
 {
-    public int questNumber = 1;
+    public int[] questNumbers;
     bool dialogueStarted = false;
 
-    [SerializeField] GameObject mainCamera, dialogueCamera, player;
+    [SerializeField] GameObject dialogueCamera, player;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            if (!QuestManager.Instance.IsCurrentQuest(questNumber)) return;
+            foreach (var questNumber in questNumbers)
+            {
+                if (!QuestManager.Instance.IsCurrentQuest(questNumber))
+                {
+                    return;
+                }
+            }
             if (!dialogueStarted)
             {
                 StartDialogue();
@@ -36,7 +42,7 @@ public class ReturnHome : MonoBehaviour
         var playerController = player.GetComponent<PlayerController>();
         playerController.canWalk = false;
         playerController.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        playerController.GetComponent<Animator>().SetTrigger("idle");
+        playerController.GetComponentInChildren<Animator>().SetTrigger("idle");
 
         var playerLookPos = transform.position;
         playerLookPos.y = playerController.transform.position.y;
@@ -44,7 +50,6 @@ public class ReturnHome : MonoBehaviour
 
         WaypointManager.Instance.DisableCanvas();
         QuestManager.Instance.DisableQuestCanvas();
-        mainCamera.SetActive(false);
         dialogueCamera.SetActive(true);
     }
 }

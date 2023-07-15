@@ -20,4 +20,4 @@ MonoBehaviour:
     quest: {fileID: 0}
     isEndingOption: 0
     isDisabled: 0
-    onclickGameObjectName: 
+    onclickGameObjectName: 0

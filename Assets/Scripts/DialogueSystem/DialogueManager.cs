@@ -9,7 +9,6 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager Instance { get; private set; }
 
     [SerializeField] bool playSoundOnText;
-    [SerializeField] GameObject mainCamera;
     public GameObject dialogueCanvas;
     public TMP_Text whoIsTalkingText;
     public TMP_Text dialogueText;
@@ -26,7 +25,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] float enabledR, enabledG, enabledB;
 
     private DialogueData currentDialogue;
-    bool skipDialogue, isDialogueStarted;
+    bool skipDialogue, isDialogueStarted, isNpc;
 
     void Awake()
     {
@@ -55,25 +54,30 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void StartDialogue(DialogueData dialogueData)
+    public void StartDialogue(DialogueData dialogueData, bool isNpc = false)
     {
+        if (dialogueData == null) return;
+        if(dialogueCanvas.activeSelf) return;
+
+        this.isNpc = isNpc;
         playerController.animator.SetBool("pass", false);
         playerController.canWalk = false;
         isDialogueStarted = true;
         dialogueCanvas.SetActive(true);
         currentDialogue = dialogueData;
         //QuestManager.Instance.DisableQuestCanvas();
-        //InteractionCanvasManager.Instance.gameObject.SetActive(false);
+        if(isNpc) InteractionCanvasManager.Instance.DisableCanvas();
         UpdateDialogUI();
     }
 
     public void OnOptionSelected(int optionIndex)
     {
+        Debug.Log("optionIndex: " + optionIndex);
         if (currentDialogue != null && optionIndex < currentDialogue.options.Length)
         {
             DialogOption selectedOption = currentDialogue.options[optionIndex];
+            Debug.Log("optionIndex2: " + optionIndex);
 
-            
             if (selectedOption.quest != null)
             {
                 QuestManager.Instance.SetQuest(selectedOption.quest);
@@ -81,7 +85,11 @@ public class DialogueManager : MonoBehaviour
 
             if (selectedOption.nextDialogue != null)
             {
-                StartDialogue(selectedOption.nextDialogue);
+                Debug.Log("optionIndex3: " + optionIndex);
+                currentDialogue = selectedOption.nextDialogue;
+                UpdateDialogUI();
+                isDialogueStarted = true;
+                return;
             }
             else if (selectedOption.isEndingOption)
             {
@@ -90,9 +98,10 @@ public class DialogueManager : MonoBehaviour
                 isDialogueStarted = false;
                 QuestManager.Instance.questCanvas.SetActive(true);
                 WaypointManager.Instance.EnableCanvas();
-                Camera.main.gameObject.SetActive(false);
-                mainCamera.SetActive(true);
+                var csCam = GameObject.FindGameObjectWithTag("CSCamera");
+                if (csCam != null) csCam.SetActive(false);
                 playerController.animator.SetBool("pass", true);
+                if(isNpc) InteractionCanvasManager.Instance.EnableCanvas();
             }
             var goName = selectedOption.onclickGameObjectName;
             if (goName != "0")

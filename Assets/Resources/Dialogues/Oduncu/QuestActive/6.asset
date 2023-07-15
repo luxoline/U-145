@@ -17,7 +17,7 @@ MonoBehaviour:
   options:
   - text: Tesekkur ederim Sami amca!
     nextDialogue: {fileID: 0}
-    quest: {fileID: 11400000, guid: 2fd4ad22cdbe2544dabbc51eef40db25, type: 2}
+    quest: {fileID: 11400000, guid: 30f8d95807b8eb741b34f87e05b6d32b, type: 2}
     isEndingOption: 1
     isDisabled: 0
     onclickGameObjectName: RemoveAlien

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameStart : MonoBehaviour
 {
-    [SerializeField] GameObject ufoFallCamera;
+    [SerializeField] GameObject ufoFallCamera, mainCamera;
     void Start()
     {
         InteractionCanvasManager.Instance.DisableCanvas();

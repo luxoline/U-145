@@ -9,8 +9,7 @@ public class NPC_Interaction : MonoBehaviour
     bool canTalk = false;
     public int npcQuestNumber = 1;
     private GameObject npc;
-    public GameObject lookAt;
-
+    public bool isTalked = false;
     private void Start()
     {
         this.npc = transform.parent.gameObject;
@@ -23,26 +22,18 @@ public class NPC_Interaction : MonoBehaviour
         if (canTalk && Input.GetKeyDown(KeyCode.E))
         {
             npc.GetComponent<Animator>().SetFloat("vertical", 1);
-            npc.transform.LookAt(lookAt.transform);
+            isTalked = true;
             if (QuestManager.Instance.IsCurrentQuest(npcQuestNumber))
             {
-                if (QuestManager.Instance.CheckQuestObjects())
+                DialogueManager.Instance.StartDialogue(Resources.Load<DialogueData>("Dialogues/" + transform.parent.gameObject.name + "/QuestActive/0"), true);
+                if (isTalked)
                 {
-                    DialogueManager.Instance.StartDialogue(Resources.Load<DialogueData>("Dialogues/" + transform.parent.gameObject.name + "/QuestCompleted/0"));
+                    DialogueManager.Instance.StartDialogue(Resources.Load<DialogueData>("Dialogues/" + transform.parent.gameObject.name + "/NoQuest/0"), true);
                 }
-                else
-                {
-                    DialogueManager.Instance.StartDialogue(Resources.Load<DialogueData>("Dialogues/"+ transform.parent.gameObject.name + "/QuestActive/0"));
-                }
-            }
-            else if(QuestManager.Instance.IsCurrentQuest(npcQuestNumber - 1))
-            {
-                DialogueManager.Instance.StartDialogue(Resources.Load<DialogueData>("Dialogues/" + transform.parent.gameObject.name + "/GetQuest/0"));
-                Debug.Log(transform.parent.gameObject.name);
             }
             else
             {
-                DialogueManager.Instance.StartDialogue(Resources.Load<DialogueData>("Dialogues/" + transform.parent.gameObject.name + "/NoQuest/0"));
+                DialogueManager.Instance.StartDialogue(Resources.Load<DialogueData>("Dialogues/" + transform.parent.gameObject.name + "/NoQuest/0"), true);
             }
         }
     }
@@ -53,7 +44,7 @@ public class NPC_Interaction : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             canTalk = true;
-            InteractionCanvasManager.Instance.gameObject.SetActive(true);
+            InteractionCanvasManager.Instance.EnableCanvas();
             InteractionCanvasManager.Instance.SetTarget(transform);
 
             if (WaypointManager.Instance.target == this.transform.parent)
@@ -68,7 +59,7 @@ public class NPC_Interaction : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             canTalk = false;
-            InteractionCanvasManager.Instance.gameObject.SetActive(false);
+            InteractionCanvasManager.Instance.DisableCanvas();
 
             if (WaypointManager.Instance.target == this.transform.parent)
             {

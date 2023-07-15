@@ -14,4 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whoIsTalking: Cocuk
   dialogueText: Belki de teknesine geri donmustur. Gidip oraya bir bakayim.
-  options: []
+  options:
+  - text: '>'
+    nextDialogue: {fileID: 0}
+    quest: {fileID: 0}
+    isEndingOption: 1
+    isDisabled: 0
+    onclickGameObjectName: 0
