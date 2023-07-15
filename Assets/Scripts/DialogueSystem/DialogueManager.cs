@@ -58,7 +58,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (dialogueData == null) return;
         if(dialogueCanvas.activeSelf) return;
-
+        GameObject.Find("FreeLook Camera").GetComponent<Cinemachine.CinemachineFreeLook>().enabled = false;
         this.isNpc = isNpc;
         playerController.animator.SetBool("pass", false);
         playerController.canWalk = false;
@@ -93,6 +93,7 @@ public class DialogueManager : MonoBehaviour
             }
             else if (selectedOption.isEndingOption)
             {
+                GameObject.Find("FreeLook Camera").GetComponent<Cinemachine.CinemachineFreeLook>().enabled = true;
                 dialogueCanvas.SetActive(false);
                 playerController.canWalk = true;
                 isDialogueStarted = false;
