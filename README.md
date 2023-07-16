@@ -5,12 +5,12 @@ U-145
  * Denizhan Keleş: Product Owner / Developer
  * Elif İlayda Güntürk: Scrum Master / Developer
  * Hüseyin Uğur Aydın: Developer
- * Ayla Bilgin: Developer
- * Sebla Karabunar: Developer
+ * Ayla Bilgin: Aktif olmayan üye
+ * Sebla Karabunar: Aktif olmayan üye
  ## Ürün İsmi
   Astrian Tales
 ## Ürün Açıklaması
-Astrian Tales üçüncül kişi bakış açısından farklı karakterleri kontrol edebildiğimiz hikaye tabanlı bir keşif oyunudur. Oyun süresince verdiğimiz kararlar oyunun sonunda oyuncuya farklı sonlar açacaktır.
+Astrian Tales üçüncül kişi bakış açısından köylü bir çocuğu kontrol ettiğimiz hikaye tabanlı bir keşif oyunudur. Oyun süresince verdiğimiz kararlar oyunun sonunda oyuncuya farklı sonlar açacaktır.
 ## Ürün Özellikleri
  Astrian Tales, galakside yolunu kaybetmiş olan uzaylı arkadaşımızın dünyanın bir köşesinde yer alan bir kasabaya iniş yapmasıyla başlar. Gemisinin motoru bozulduğu için tekrar uçuş yapamayan bu arkadaşımız, halkıyla iletişim kurmaya çalışır ancak iletişim ağı da çökmüştür. Köylülerle ilk teması iyi geçmeyen uzaylı arkadaşımız bu macerasında yeni bir dostla tanışır.
 ## Hedef Kitle
@@ -53,3 +53,24 @@ Astrian Tales üçüncül kişi bakış açısından farklı karakterleri kontro
     
   **Sprint Retrospective:**
  * Kurban bayramından dolayı yaşanan düzensiz buluşmalar tekrardan eski haline dönmelidir.
+
+
+   # Sprint 3
+* **Sprint Notları:** Tüm Sprint, UStory ve Task renklendirilmesi Trello'da ayrıntılı olarak bulunabilir. Sprint 2'te tamamlanmış olan görevin tekrar edilmesiyle beraber Sprint 3 ile beraber proje tamamlanmıştır.
+* **Sprint içinde tamamlanması tahmin edilen puan:** 100 puan
+* **Daily Scrum:** Discord üzerinden günlük çıktılar [ektedir.](https://github.com/luxoline/U-145/assets/102388276/129fd9a9-4f21-4101-8759-78feba778a84)
+* **Sprint Board Update:**
+  ![resim](https://github.com/luxoline/U-145/assets/102388276/da24794f-ccee-412f-8911-ae0e8c14b044)
+
+* **Ürün Durumu:**
+![image](https://github.com/luxoline/U-145/assets/102388276/545b3123-48aa-4347-9f0d-28b66ddbd560)
+![image2](https://github.com/luxoline/U-145/assets/102388276/ef050c7e-facc-4621-8b7a-f8ad5cee906b)
+ **Sprint Review:**
+* Sprint boyunca istenilen hızda görevler tamamlandı. Sprint 2'de karar verilen hikaye akışı tekrar gözden geçirildi, bu yüzden o göreve tanımlanan görev ve puan   3.Sprint'te tekrarlandı.
+
+  **Sprint Retrospective:**
+  * Ne iyi gitti?:
+
+  * Soruna sebep açan durumlar nelerdi:
+
+  * Farklı bir yol denenecek durumlar nelerdi?:
