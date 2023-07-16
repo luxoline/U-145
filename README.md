@@ -10,9 +10,9 @@ U-145
  ## Ürün İsmi
   Astrian Tales
 ## Ürün Açıklaması
-Astrian Tales üçüncül kişi bakış açısından köylü bir çocuğu kontrol ettiğimiz hikaye tabanlı bir keşif oyunudur. Oyun süresince verdiğimiz kararlar oyunun sonunda oyuncuya farklı sonlar açacaktır.
+Astrian Tales üçüncül kişi bakış açısından köylü bir çocuğu kontrol ettiğimiz hikaye tabanlı bir keşif oyunudur.
 ## Ürün Özellikleri
- Astrian Tales, galakside yolunu kaybetmiş olan uzaylı arkadaşımızın dünyanın bir köşesinde yer alan bir kasabaya iniş yapmasıyla başlar. Gemisinin motoru bozulduğu için tekrar uçuş yapamayan bu arkadaşımız, halkıyla iletişim kurmaya çalışır ancak iletişim ağı da çökmüştür. Köylülerle ilk teması iyi geçmeyen uzaylı arkadaşımız bu macerasında yeni bir dostla tanışır.
+ Astrian Tales, galakside yolunu kaybetmiş olan uzaylı arkadaşımızın dünyanın bir köşesinde yer alan bir kasabaya düşüşüyle başlar. Bu küçük arkadaşımızla yolları kesişen ve onunla bir maceraya atılan Hasan'ın gerçeklerle yüzleşmesi gerekmektedir. 
 ## Hedef Kitle
 * Indie oyun severler
 * Alternatif son arayan oyuncular
@@ -66,11 +66,7 @@ Astrian Tales üçüncül kişi bakış açısından köylü bir çocuğu kontro
 ![image](https://github.com/luxoline/U-145/assets/102388276/545b3123-48aa-4347-9f0d-28b66ddbd560)
 ![image2](https://github.com/luxoline/U-145/assets/102388276/ef050c7e-facc-4621-8b7a-f8ad5cee906b)
  **Sprint Review:**
-* Sprint boyunca istenilen hızda görevler tamamlandı. Sprint 2'de karar verilen hikaye akışı tekrar gözden geçirildi, bu yüzden o göreve tanımlanan görev ve puan   3.Sprint'te tekrarlandı.
+* Sprint boyunca istenilen hızda görevler tamamlandı. Sprint 2'de karar verilen hikaye akışı tekrar gözden geçirildi, bu yüzden o göreve tanımlanan görev ve puan 3.Sprint'te tekrarlandı.
 
   **Sprint Retrospective:**
-  * Ne iyi gitti?:
-
-  * Soruna sebep açan durumlar nelerdi:
-
-  * Farklı bir yol denenecek durumlar nelerdi?:
+  * Takım arkadaşlarımızla gayet olumlu bir sprint geçirdiğimizi düşünüyoruz, sadece hikaye değişikliği bu kadar geç vakitte olmasaydı oyuna daha fazla detay ekleyebilirdik.
