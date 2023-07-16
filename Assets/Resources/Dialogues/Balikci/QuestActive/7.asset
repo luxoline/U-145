@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: 7
   m_EditorClassIdentifier: 
   whoIsTalking: Erkan
-  dialogueText: Anladim Hasan... Benim biraz isim var, benden bir istegin var miydi?
+  dialogueText: "Anlad\u0131m Hasan... Benim biraz i\u015Fim var, benden bir iste\u011Fin
+    var miydi?"
   options:
-  - text: Yok Erkan Amca, tesekkur ederim. Iyi gunler!
+  - text: "Yok Erkan Amca, te\u015Fekk\xFCr ederim. \u0130yi g\xFCnler!"
     nextDialogue: {fileID: 0}
     quest: {fileID: 0}
     isEndingOption: 1

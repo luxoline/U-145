@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: 6
   m_EditorClassIdentifier: 
   whoIsTalking: Oduncu
-  dialogueText: "Al bakal\u0131m evlat, benden olsun. *odunlari verir*"
+  dialogueText: "Al bakal\u0131m evlat, benden olsun. *Odunlar\u0131 verir*"
   options:
-  - text: Tesekkur ederim Sami amca!
+  - text: "Te\u015Fekk\xFCr ederim Sami amca!"
     nextDialogue: {fileID: 0}
     quest: {fileID: 11400000, guid: 30f8d95807b8eb741b34f87e05b6d32b, type: 2}
     isEndingOption: 1

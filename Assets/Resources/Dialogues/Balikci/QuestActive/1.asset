@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: 1
   m_EditorClassIdentifier: 
   whoIsTalking: Erkan
-  dialogueText: Hasan! Nasilsin bakalim. Ne zaman oldu gorusemedik. Baliktan zaman
-    kalmiyor...
+  dialogueText: "Hasan! Nas\u0131ls\u0131n bakal\u0131m. Ne zaman oldu g\xF6r\xFC\u015Femedik.
+    Bal\u0131ktan zaman kalm\u0131yor..."
   options:
-  - text: Evet Erkan Amca, ozlettin kendini.
+  - text: "Evet Erkan Amca, \xF6zlettin kendini."
     nextDialogue: {fileID: 11400000, guid: 85f025fa77c791647957eb081a71224f, type: 2}
     quest: {fileID: 0}
     isEndingOption: 0
     isDisabled: 0
     onclickGameObjectName: 
-  - text: Erkan Amca! Bugun ne gordugume inanamazsin!
+  - text: "Erkan Amca! Bug\xFCn ne g\xF6rd\xFC\u011F\xFCme inanamazs\u0131n!"
     nextDialogue: {fileID: 11400000, guid: 0bdb3547a2b41084ab6621c8419e097a, type: 2}
     quest: {fileID: 0}
     isEndingOption: 0

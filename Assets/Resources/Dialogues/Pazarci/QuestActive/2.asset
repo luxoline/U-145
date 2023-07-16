@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: 2
   m_EditorClassIdentifier: 
   whoIsTalking: Hakan
-  dialogueText: Ne gordun acaba? Ormanda gezen bir tilkiden bahsetmislerdi. Dikkat
-    et.
+  dialogueText: "Ne g\xF6rd\xFCn acaba? Ormanda gezen bir tilkiden bahsetmi\u015Flerdi.
+    Dikkat et."
   options:
-  - text: Hayir Hakan Amca! Bir Uzayli gordum!
+  - text: "Hay\u0131r Hakan Amca! Bir Uzayl\u0131 g\xF6rd\xFCm!"
     nextDialogue: {fileID: 11400000, guid: ce7d5d0fbfe5e3540a48d1e03cc8e067, type: 2}
     quest: {fileID: 0}
     isEndingOption: 0

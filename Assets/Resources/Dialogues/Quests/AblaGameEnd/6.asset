@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b584cd1c3fdf2a429baa575c8ba7634, type: 3}
   m_Name: 6
   m_EditorClassIdentifier: 
-  whoIsTalking: Cocuk
+  whoIsTalking: Hasan
   dialogueText: "B\xFCy\xFCkannem \xF6ld\xFC m\xFC.. Ama ama benim ba\u015Fka kimsem
     yok, ne yapaca\u011F\u0131m \u015Fimdi neden beni b\u0131rakt\u0131 ki burada."
   options:

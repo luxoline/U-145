@@ -15,12 +15,6 @@ MonoBehaviour:
   whoIsTalking: Uzayli
   dialogueText: ...
   options:
-  - text: "Gecenin bu saatinde g\xF6kten nas\u0131l d\xFC\u015Ft\xFCn b\xF6yle?"
-    nextDialogue: {fileID: 0}
-    quest: {fileID: 0}
-    isEndingOption: 0
-    isDisabled: 1
-    onclickGameObjectName: 0
   - text: Beni duyuyor musun?
     nextDialogue: {fileID: 11400000, guid: 135510229ac5abe458517bcbb3f95f34, type: 2}
     quest: {fileID: 0}

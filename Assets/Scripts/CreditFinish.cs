@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class CreditFinish : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(CreditEnd());

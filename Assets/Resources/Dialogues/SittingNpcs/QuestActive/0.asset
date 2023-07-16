@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b584cd1c3fdf2a429baa575c8ba7634, type: 3}
   m_Name: 0
   m_EditorClassIdentifier: 
-  whoIsTalking: Cocuk
-  dialogueText: Ayse Teyze! Faruk Amca! Ne gordugumu asla tahmin edemezsiniz!
+  whoIsTalking: Hasan
+  dialogueText: "Ay\u015Fe Teyze! Faruk Amca! Ne g\xF6rd\xFC\u011F\xFCm\xFC asla
+    tahmin edemezsiniz!"
   options:
   - text: '>'
     nextDialogue: {fileID: 11400000, guid: fe683c0aa87f43c4899d7aebf7ccab94, type: 2}

@@ -10,8 +10,13 @@ public class ReturnHome : MonoBehaviour
     bool dialogueStarted = false;
 
     [SerializeField] GameObject dialogueCamera, player;
-
-    private void OnTriggerEnter(Collider other)
+    MusicManager musicManager;
+    void Start()
+    {
+        GameObject MusicManager = GameObject.Find("MusicManager");
+        musicManager = MusicManager.GetComponent<MusicManager>();
+    }
+        private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
@@ -22,6 +27,7 @@ public class ReturnHome : MonoBehaviour
             {
                 StartDialogue();
                 dialogueStarted = true;
+                musicManager.changeFinishMusic();
             }
         }
     }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 6
   m_EditorClassIdentifier: 
   whoIsTalking: Erkan
-  dialogueText: Demek yine su oyuncak...
+  dialogueText: "Demek yine \u015Fu oyuncak..."
   options:
   - text: '>'
     nextDialogue: {fileID: 11400000, guid: 052297b92bf46aa4788b6b8092ce1b3d, type: 2}

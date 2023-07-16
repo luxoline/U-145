@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: 0
   m_EditorClassIdentifier: 
   whoIsTalking: Hakan
-  dialogueText: Selam Hasan! Nasilsin iyisin insallah!
+  dialogueText: "Selam Hasan! Nas\u0131ls\u0131n iyisin in\u015Fallah!"
   options:
-  - text: Iyiyim Hakan Amca tesekkur ederim. Sen nasilsin?
+  - text: "\u0130Iyiyim Hakan Amca te\u015Fekkur ederim. Sen nasilsin?"
     nextDialogue: {fileID: 11400000, guid: fe2e155468d72f54697f5c1e2f97ea79, type: 2}
     quest: {fileID: 0}
     isEndingOption: 0

@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: 1
   m_EditorClassIdentifier: 
   whoIsTalking: Hakan
-  dialogueText: Ben de iyiyim. Gorugun gibi calisip duruyoruz.
+  dialogueText: "Ben de iyiyim. G\xF6rd\xFC\u011F\xFCn gibi \xE7al\u0131\u015F\u0131p
+    duruyoruz."
   options:
-  - text: Hakan Amca! Bugun ne gordum tahmin bile edemezsin!
+  - text: "Hakan Amca! Bug\xFCn ne g\xF6rd\xFCm tahmin bile edemezsin!"
     nextDialogue: {fileID: 11400000, guid: 2c2c5a7c461b3f544a3e606347b0ea2d, type: 2}
     quest: {fileID: 0}
     isEndingOption: 0

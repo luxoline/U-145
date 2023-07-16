@@ -15,7 +15,7 @@ MonoBehaviour:
   whoIsTalking: Uzayli
   dialogueText: ...
   options:
-  - text: "Gecenin bu saatinde g\xF6kten nas\u0131l d\xFC\u015Ft\xFCn b\xF6yle?"
+  - text: "Sabah\u0131n k\xF6r\xFCnde g\xF6kten nas\u0131l d\xFC\u015Ft\xFCn b\xF6yle?"
     nextDialogue: {fileID: 11400000, guid: e30a1947a71adbe4caa335e16f15e76c, type: 2}
     quest: {fileID: 0}
     isEndingOption: 0

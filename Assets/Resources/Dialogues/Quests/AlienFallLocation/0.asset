@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b584cd1c3fdf2a429baa575c8ba7634, type: 3}
   m_Name: 0
   m_EditorClassIdentifier: 
-  whoIsTalking: Cocuk
-  dialogueText: O da ne?? Orada yatan biri var sanirim.
+  whoIsTalking: "\xC7ocuk"
+  dialogueText: "O da ne?? Orada yatan biri var san\u0131r\u0131m."
   options:
   - text: '>'
     nextDialogue: {fileID: 11400000, guid: 02af51091551dc64c9cfa7f06da10385, type: 2}

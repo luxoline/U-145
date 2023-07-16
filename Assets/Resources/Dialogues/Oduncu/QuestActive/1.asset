@@ -13,14 +13,8 @@ MonoBehaviour:
   m_Name: 1
   m_EditorClassIdentifier: 
   whoIsTalking: Oduncu
-  dialogueText: Ben de iyiyim Hasan tesekkur ederim.
+  dialogueText: "Ben de iyiyim Hasan te\u015Fekk\xFCr ederim."
   options:
-  - text: Iyiyim Sami amca. Sen nasilsin?
-    nextDialogue: {fileID: 0}
-    quest: {fileID: 0}
-    isEndingOption: 0
-    isDisabled: 1
-    onclickGameObjectName: 
   - text: "Sami amca g\xF6kten d\xFC\u015Fen tekne gibi \u015Feyi g\xF6rd\xFCn m\xFC
       sen de?"
     nextDialogue: {fileID: 11400000, guid: ed8f14e47a365be49804dd22416925a9, type: 2}

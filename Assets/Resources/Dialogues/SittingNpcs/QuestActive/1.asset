@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: 1
   m_EditorClassIdentifier: 
   whoIsTalking: Ayse Teyze
-  dialogueText: Ne gordun Hasan, merak ettik simdi.
+  dialogueText: "Ne g\xF6rd\xFCn Hasan, merak ettik \u015Fimdi."
   options:
-  - text: Bir uzayli!
+  - text: "Bir uzayl\u0131!"
     nextDialogue: {fileID: 11400000, guid: 945991b874d14fb498488dda223db7fe, type: 2}
     quest: {fileID: 0}
     isEndingOption: 0
     isDisabled: 0
     onclickGameObjectName: 
-  - text: Babaannem icin cicek toplamaya cikmistim...
+  - text: "Babaannem i\xE7in \xE7i\xE7ek toplamaya \xE7\u0131km\u0131\u015Ft\u0131m..."
     nextDialogue: {fileID: 11400000, guid: 78572a0321503ea46bd6bf5892ea85ab, type: 2}
     quest: {fileID: 0}
     isEndingOption: 0

@@ -15,7 +15,7 @@ MonoBehaviour:
   whoIsTalking: Oduncu
   dialogueText: "Hay\u0131r Hasan g\xF6rmedim\u2026"
   options:
-  - text: Nasil gormedin! Kocamandi!
+  - text: "Nas\u0131l g\xF6rmedim! Kocamand\u0131!"
     nextDialogue: {fileID: 11400000, guid: d4d410755bd5d104c84c38da16e6da1c, type: 2}
     quest: {fileID: 0}
     isEndingOption: 0

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b584cd1c3fdf2a429baa575c8ba7634, type: 3}
   m_Name: 3
   m_EditorClassIdentifier: 
-  whoIsTalking: Cocuk
+  whoIsTalking: Hasan
   dialogueText: "Kasabadan odun almaya gitmem gerekiyor. Sen burada kal b\xFCy\xFCkannem
     hasta l\xFCtfen onu rahats\u0131z etme."
   options:

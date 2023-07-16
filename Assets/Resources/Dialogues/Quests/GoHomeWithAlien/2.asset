@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b584cd1c3fdf2a429baa575c8ba7634, type: 3}
   m_Name: 2
   m_EditorClassIdentifier: 
-  whoIsTalking: Cocuk
-  dialogueText: "B\xFCy\xFCkannem hasta olmasa ona danisirdik\u2026Sen bugunluk burda
-    kal sonra ucan teknene bakariz\u2026"
+  whoIsTalking: Hasan
+  dialogueText: "B\xFCy\xFCkannem hasta olmasa ona dan\u0131\u015F\u0131rd\u0131k\u2026Sen
+    bug\xFCnl\xFCk burda kal sonra u\xE7an teknene bakar\u0131z\u2026"
   options:
   - text: '>'
     nextDialogue: {fileID: 11400000, guid: 8e52c7b1fb2ebee4fb9658c03325e30e, type: 2}

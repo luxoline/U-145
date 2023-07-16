@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: 2
   m_EditorClassIdentifier: 
   whoIsTalking: Fatma
-  dialogueText: Babaanneni cok severdik...
+  dialogueText: "Babaanneni \xE7ok severdik..."
   options:
-  - text: Artik sevmiyor musunuz?
+  - text: "Art\u0131k sevmiyor musunuz?"
     nextDialogue: {fileID: 11400000, guid: e5314b89e70469e49844d49d799ade0f, type: 2}
     quest: {fileID: 0}
     isEndingOption: 0

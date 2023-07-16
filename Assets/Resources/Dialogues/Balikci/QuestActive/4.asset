@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: 4
   m_EditorClassIdentifier: 
   whoIsTalking: Erkan
-  dialogueText: Hahahah! Oldu olacak icinde uzayli da vardir!
+  dialogueText: "Hahahah! Oldu olacak i\xE7inde uzayl\u0131 da vard\u0131r!"
   options:
-  - text: Evet vardi! Su an babaannemin evinde, birlikte cicek toplamaya gidecegiz.
+  - text: "Evet vard\u0131! \u015Eu an babaannemin evinde, birlikte \xE7i\xE7ek toplamaya
+      gidece\u011Fiz."
     nextDialogue: {fileID: 11400000, guid: 8aba2c2ac56461845bf6d8b3602e8a6e, type: 2}
     quest: {fileID: 0}
     isEndingOption: 0

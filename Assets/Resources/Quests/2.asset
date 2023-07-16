@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a4774ca326bd2a4e92c9c6d7ddf0171, type: 3}
   m_Name: 2
   m_EditorClassIdentifier: 
-  questName: odun almaya git
-  questDescription: Oduncudan odun al
+  questName: Oodun Almaya Git
+  questDescription: Oduncudan Odun Al
+  questDescription2: 
   questNumber: 2
   neededItemTag: 
   neededItemAmount: 0

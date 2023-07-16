@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: 0
   m_EditorClassIdentifier: 
   whoIsTalking: 
-  dialogueText: Kasabalilar buna inanamayacak!
+  dialogueText: "Kasabal\u0131lar buna inanamayacak!"
   options: []

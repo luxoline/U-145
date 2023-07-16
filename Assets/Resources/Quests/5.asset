@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a4774ca326bd2a4e92c9c6d7ddf0171, type: 3}
   m_Name: 5
   m_EditorClassIdentifier: 
-  questName: uzayliyi ara
-  questDescription: Uzayliyi ara
+  questName: "Uzayl\u0131y\u0131 Ara"
+  questDescription: "Uzayl\u0131y\u0131 Ara"
+  questDescription2: 
   questNumber: 5
   neededItemTag: 
   neededItemAmount: 0

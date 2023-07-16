@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b584cd1c3fdf2a429baa575c8ba7634, type: 3}
   m_Name: 0
   m_EditorClassIdentifier: 
-  whoIsTalking: Cocuk
-  dialogueText: "Sabahin bir vakti nerden geldin ki simdi? Kimse de yok etrafta,
-    konu\u015Fmuyorsun da\u2026"
+  whoIsTalking: Hasan
+  dialogueText: "Sabah\u0131n bir vakti nerden geldin ki \u015Fimdi? Kimse de yok
+    etrafta, konu\u015Fmuyorsun da\u2026"
   options:
   - text: '>'
     nextDialogue: {fileID: 11400000, guid: 6b7b740e143f4614b9f1ac5d3a8ba2ff, type: 2}

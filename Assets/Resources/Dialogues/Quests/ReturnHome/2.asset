@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b584cd1c3fdf2a429baa575c8ba7634, type: 3}
   m_Name: 2
   m_EditorClassIdentifier: 
-  whoIsTalking: Cocuk
-  dialogueText: Belki de teknesine geri donmustur. Gidip oraya bir bakayim.
+  whoIsTalking: Hasan
+  dialogueText: "Belki de teknesine geri d\xF6nm\xFC\u015Ft\xFCr. Gidip oraya b\u0131r
+    bakay\u0131m."
   options:
   - text: '>'
     nextDialogue: {fileID: 0}

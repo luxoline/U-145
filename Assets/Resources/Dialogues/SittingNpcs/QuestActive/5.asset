@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: 5
   m_EditorClassIdentifier: 
   whoIsTalking: Ayse
-  dialogueText: Sen Faruk Amcani bosver oglum. Oynamana bak.
+  dialogueText: "Sen Faruk Amcan\u0131 bo\u015Fver o\u011Flum. Oynamana bak."
   options:
-  - text: Peki Ayse Teyze. Kendinize iyi bakin, eve donmeliyim.
+  - text: "Peki Ay\u015Fe Teyze. Kendinize iyi bak\u0131n, eve d\xF6nmeliyim."
     nextDialogue: {fileID: 0}
     quest: {fileID: 0}
     isEndingOption: 1

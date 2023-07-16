@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: 7
   m_EditorClassIdentifier: 
   whoIsTalking: Faruk
-  dialogueText: Neyse oglum. Bosver, sen oynamana bak.
+  dialogueText: "Neyse o\u011Flum. Bo\u015Fver, sen oynamana bak."
   options:
-  - text: Peki Faruk Amca. Kendinize iyi bakin, eve donmeliyim.
+  - text: "Peki Faruk Amca. Kendinize iyi bak\u0131n, eve d\xF6nmeliyim."
     nextDialogue: {fileID: 0}
     quest: {fileID: 0}
     isEndingOption: 1

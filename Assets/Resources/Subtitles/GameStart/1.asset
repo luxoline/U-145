@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: 1
   m_EditorClassIdentifier: 
   whoIsTalking: Cocuk
-  dialogueText: Babaanem bu cicekleri gercekten cok seviyor.
+  dialogueText: "Babaanem bu \xE7i\xE7ekleri ger\xE7ekten \xE7ok seviyor."
   options: []

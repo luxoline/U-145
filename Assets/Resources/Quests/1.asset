@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a4774ca326bd2a4e92c9c6d7ddf0171, type: 3}
   m_Name: 1
   m_EditorClassIdentifier: 
-  questName: eve git
-  questDescription: Uzayliyla birlikte eve git
+  questName: Eve Git
+  questDescription: "Uzayl\u0131yla Birlikte Eve Git"
+  questDescription2: 
   questNumber: 1
   neededItemTag: 
   neededItemAmount: 0

@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: 0
   m_EditorClassIdentifier: 
   whoIsTalking: Fatma
-  dialogueText: Oo Hasan! Nerelerdesin, goremez olduk seni.
+  dialogueText: "Oo Hasan! Nerelerdesin, g\xF6remez olduk seni."
   options:
-  - text: Babaannem hasta oldugundan onunla ilgileniyordum Fatma Abla. Hic disari
-      cikamiyor.
+  - text: "Babaannem hasta oldu\u011Fundan onunla ilgileniyordum Fatma Abla. Hi\xE7
+      d\u0131\u015Far\u0131 \xE7\u0131kam\u0131yor."
     nextDialogue: {fileID: 11400000, guid: 672ec8dd342a6814eb960941c92bb2cf, type: 2}
     quest: {fileID: 0}
     isEndingOption: 0

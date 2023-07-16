@@ -21,9 +21,3 @@ MonoBehaviour:
     isEndingOption: 0
     isDisabled: 0
     onclickGameObjectName: 0
-  - text: Beni duyuyor musun?
-    nextDialogue: {fileID: 0}
-    quest: {fileID: 0}
-    isEndingOption: 0
-    isDisabled: 1
-    onclickGameObjectName: 0

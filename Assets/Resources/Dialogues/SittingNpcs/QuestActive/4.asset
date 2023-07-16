@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: 4
   m_EditorClassIdentifier: 
   whoIsTalking: Faruk
-  dialogueText: Hasan, yavrum. O ciceklerden artik toplamamalisin.
+  dialogueText: "Hasan, yavrum. O \xE7i\xE7eklerden art\u0131k toplamamal\u0131s\u0131n."
   options:
-  - text: Ama Faruk Amca! Babaannem onlari cok seviyor.
+  - text: "Ama Faruk Amca! Babaannem onlar\u0131 \xE7ok seviyor."
     nextDialogue: {fileID: 11400000, guid: 2d6131fd56f0fa44eade011c208e1d47, type: 2}
     quest: {fileID: 0}
     isEndingOption: 0
     isDisabled: 0
     onclickGameObjectName: 
-  - text: Neden toplamayayim ki?
+  - text: "Neden toplamayay\u0131m ki?"
     nextDialogue: {fileID: 11400000, guid: 676438cd75c724a4ab7e357aa698165e, type: 2}
     quest: {fileID: 0}
     isEndingOption: 0

@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: 3
   m_EditorClassIdentifier: 
   whoIsTalking: Hakan
-  dialogueText: "Benimle kafa mi buluyorsun Hasan! Is\u0131m gucum var. Bir sey lazim
-    degilse git oyununu oyna."
+  dialogueText: "Benimle kafa m\u0131 buluyorsun Hasan! \u0130\u015Fim g\xFCc\xFCm
+    var. Bir \u015Fey laz\u0131m de\u011Filse git oyununu oyna."
   options:
-  - text: Peki Hakan amca... Gorusuruz.
+  - text: "Peki Hakan amca... G\xF6r\xFC\u015F\xFCr\xFCz."
     nextDialogue: {fileID: 0}
     quest: {fileID: 0}
     isEndingOption: 1

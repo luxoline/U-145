@@ -15,7 +15,7 @@ MonoBehaviour:
   whoIsTalking: Faruk
   dialogueText: Hahaha! Ilahi Hasan! Uzayli diye bir sey olur mu hic! Nerede gordun?
   options:
-  - text: Babaannem icin cicek toplamaya cikmistim...
+  - text: "Babaannem i\xE7in \xE7i\xE7ek toplamaya \xE7\u0131km\u0131\u015Ft\u0131m..."
     nextDialogue: {fileID: 11400000, guid: 78572a0321503ea46bd6bf5892ea85ab, type: 2}
     quest: {fileID: 0}
     isEndingOption: 0

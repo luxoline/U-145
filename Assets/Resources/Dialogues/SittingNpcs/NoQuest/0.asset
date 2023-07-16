@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: 0
   m_EditorClassIdentifier: 
   whoIsTalking: Ayse
-  dialogueText: Iyi gunler Hasan!
+  dialogueText: "\u0130yi gunler Hasan!"
   options:
-  - text: "Iy\u0131 gunler Ayse Teyze, Faruk Amca!"
+  - text: "\u0130yi g\xFCnler Ayse Teyze, Faruk Amca!"
     nextDialogue: {fileID: 0}
     quest: {fileID: 0}
     isEndingOption: 1

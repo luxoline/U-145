@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a4774ca326bd2a4e92c9c6d7ddf0171, type: 3}
   m_Name: 3
   m_EditorClassIdentifier: 
-  questName: kasabaliyla konus
-  questDescription: "Uzaylinin yanina eve d\xF6n"
-  questDescription2: Kasabalilara uzaylidan bahset (istege bagli)
+  questName: "Kasabaliyla Konu\u015F"
+  questDescription: "Uzayl\u0131n\u0131n Yan\u0131na Eve D\xF6n"
+  questDescription2: "Kasabal\u0131lara Uzayl\u0131dan Bahset (\u0130ste\u011Fe Ba\u011Fl\u0131)"
   questNumber: 3
   neededItemTag: 
   neededItemAmount: 0

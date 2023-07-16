@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: 4
   m_EditorClassIdentifier: 
   whoIsTalking: Fatma
-  dialogueText: Seviyoruz tabii ki oyle demek istemedim. Neyse benim biraz isim vardi.
-    Sonra gorusuruz Hasan.
+  dialogueText: "Seviyoruz tabii ki \xF6yle demek istemedim. Neyse benim biraz i\u015Fim
+    vard\u0131. Sonra g\xF6r\xFC\u015F\xFCr\xFCz Hasan."
   options:
-  - text: Gorusuruz Fatma Abla!
+  - text: "G\xF6r\xFC\u015F\xFCr\xFCz Fatma Abla!"
     nextDialogue: {fileID: 0}
     quest: {fileID: 0}
     isEndingOption: 1

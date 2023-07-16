@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: 0
   m_EditorClassIdentifier: 
   whoIsTalking: Erkan
-  dialogueText: Balik mi istiyorsun Hasan?
+  dialogueText: "Bal\u0131k mi istiyorsun Hasan?"
   options:
-  - text: Hayir Erkan amca, tesekkurler.
+  - text: "Hay\u0131r Erkan amca, te\u015Fekk\xFCrler."
     nextDialogue: {fileID: 0}
     quest: {fileID: 0}
     isEndingOption: 1

@@ -15,7 +15,7 @@ MonoBehaviour:
   whoIsTalking: Ayse
   dialogueText: Faruk!!.. Ee Hasan, daha sonra noldu?
   options:
-  - text: Tam bir tane bulmustum ki gokten garip bir sey dustu.
+  - text: "Tam bir tane bulmu\u015Ftum ki g\xF6kten garip bir \u015Fey d\xFC\u015Ft\xFC."
     nextDialogue: {fileID: 11400000, guid: b406ad4ccaddbd440a6f06522d24656d, type: 2}
     quest: {fileID: 0}
     isEndingOption: 0

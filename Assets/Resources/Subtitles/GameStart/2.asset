@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: 2
   m_EditorClassIdentifier: 
   whoIsTalking: Cocuk
-  dialogueText: Bu surprizime cok sevinecek!
+  dialogueText: "Bu s\xFCrprizime \xE7ok sevinecek!"
   options: []

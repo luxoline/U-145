@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: 2
   m_EditorClassIdentifier: 
   whoIsTalking: Erkan
-  dialogueText: Hahaha! Tesekkur ederim Hasan. Ben de seni ozlemisim.
+  dialogueText: "Hahaha! Te\u015Fekk\xFCr ederim Hasan. Ben de seni \xF6zlemi\u015Fim."
   options:
-  - text: Erkan Amca! Bugun ne gordugume inanamazsin!
+  - text: "Erkan Amca! Bug\xFCn ne g\xF6rd\xFC\u011F\xFCme inanamazs\u0131n!"
     nextDialogue: {fileID: 11400000, guid: 0bdb3547a2b41084ab6621c8419e097a, type: 2}
     quest: {fileID: 0}
     isEndingOption: 0

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: 1
   m_EditorClassIdentifier: 
   whoIsTalking: 
-  dialogueText: Hepsine anlatmaliyim!
+  dialogueText: "Hepsine anlatmal\u0131y\u0131m!"
   options: []

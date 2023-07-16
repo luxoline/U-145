@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: 5
   m_EditorClassIdentifier: 
   whoIsTalking: Erkan
-  dialogueText: Ne uzaylisi Hasan guldurme beni hahaha!
+  dialogueText: "Ne uzayl\u0131s\u0131 Hasan g\xFCld\xFCrme beni hahaha!"
   options:
-  - text: Evet, gercekten! Babaanneme cicek toplarken gozumun ununde teknesi dustu!
+  - text: "Evet, ger\xE7ekten! Babaanneme \xE7i\xE7ek toplarken g\xF6z\xFCm\xFCn
+      \xF6n\xFCnde teknesi d\xFC\u015Ft\xFC!"
     nextDialogue: {fileID: 11400000, guid: 8aba2c2ac56461845bf6d8b3602e8a6e, type: 2}
     quest: {fileID: 0}
     isEndingOption: 0

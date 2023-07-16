@@ -15,7 +15,7 @@ MonoBehaviour:
   whoIsTalking: Oduncu
   dialogueText: Merhaba Hasan, ne haber kereta!
   options:
-  - text: Iyiyim Sami amca. Sen nasilsin?
+  - text: "\u0130yiyim Sami amca. Sen nas\u0131ls\u0131n?"
     nextDialogue: {fileID: 11400000, guid: 0aa77c99523585c44ac9c25fe99ed17e, type: 2}
     quest: {fileID: 0}
     isEndingOption: 0

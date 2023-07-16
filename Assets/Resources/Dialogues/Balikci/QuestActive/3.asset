@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 3
   m_EditorClassIdentifier: 
   whoIsTalking: Erkan
-  dialogueText: Hayirdir insallah. Ne gordun bakalim?
+  dialogueText: "Hay\u0131rd\u0131r in\u015Fallah. Ne g\xF6rd\xFCn bakal\u0131m?"
   options:
   - text: Bir uzay teknesi!
     nextDialogue: {fileID: 11400000, guid: 846f8504f393d8346a1f8b8bb8bc9dff, type: 2}
@@ -21,7 +21,7 @@ MonoBehaviour:
     isEndingOption: 0
     isDisabled: 0
     onclickGameObjectName: 
-  - text: Bir uzayli!
+  - text: "Bir uzayl\u0131!"
     nextDialogue: {fileID: 11400000, guid: e7091e2b38f3dde48b2e6b1cbd7fe610, type: 2}
     quest: {fileID: 0}
     isEndingOption: 0

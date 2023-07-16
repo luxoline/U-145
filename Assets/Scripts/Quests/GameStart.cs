@@ -5,8 +5,12 @@ using UnityEngine;
 public class GameStart : MonoBehaviour
 {
     [SerializeField] GameObject ufoFallCamera, freeLook;
+    MusicManager musicManager;
     void Start()
     {
+        GameObject MusicManager = GameObject.Find("MusicManager");
+        musicManager = MusicManager.GetComponent<MusicManager>(); 
+        musicManager.changeGameMusic();
         freeLook.GetComponent<Cinemachine.CinemachineFreeLook>().enabled = false;
         InteractionCanvasManager.Instance.DisableCanvas();
         WaypointManager.Instance.DisableCanvas();
