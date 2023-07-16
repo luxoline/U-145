@@ -17,7 +17,7 @@ MonoBehaviour:
   options:
   - text: '>'
     nextDialogue: {fileID: 0}
-    quest: {fileID: 0}
+    quest: {fileID: 11400000, guid: e8d655fd759f42a4eaf9f33c5ef66017, type: 2}
     isEndingOption: 1
     isDisabled: 0
     onclickGameObjectName: 0

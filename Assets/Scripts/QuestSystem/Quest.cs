@@ -5,6 +5,7 @@ public class Quest : ScriptableObject
 {
     public string questName = "";
     public string questDescription = "";
+    public string questDescription2 = "";
     public int questNumber = 0;
     public string neededItemTag = null;
     public int neededItemAmount = 0;

@@ -8,6 +8,7 @@ public class CheckTalkNPC : MonoBehaviour
     private void OnEnable()
     {
         Check();
+        gameObject.SetActive(false);
     }
 
     private void Check()

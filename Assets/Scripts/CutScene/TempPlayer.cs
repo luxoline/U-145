@@ -7,6 +7,7 @@ public class TempPlayer : MonoBehaviour
     bool canWalk = true;
     public float speed = 5f;
     GameObject flower;
+    [SerializeField] GameObject tempAbla;
     // Update is called once per frame
     void Update()
     {
@@ -33,6 +34,20 @@ public class TempPlayer : MonoBehaviour
             var lookPos = other.transform.position;
             lookPos.y = transform.position.y;
             transform.LookAt(lookPos);
+        }
+
+        if (other.gameObject.name == "LookForAlienLocation")
+        {
+
+        }
+
+        if (other.gameObject.name == "CocukTrigger")
+        {
+            GetComponent<Animator>().SetBool("goidle", true);
+            canWalk = false;
+
+            DialogueManager.Instance.StartDialogue(Resources.Load<DialogueData>("Dialogues/Quests/LF/0"));
+
         }
     }
 

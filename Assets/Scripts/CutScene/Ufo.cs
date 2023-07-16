@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Ufo : MonoBehaviour
 {
-    [SerializeField] GameObject alien, ufoPrefab, tempPlayer;
+    [SerializeField] GameObject alien, ufoPrefab, tempPlayer, freeLook;
     [SerializeField] GameObject ufoFallCutSceneCamera;
 
     private void Start()
@@ -24,6 +24,7 @@ public class Ufo : MonoBehaviour
         DialogueManager.Instance.StartDialogue(Resources.Load<DialogueData>("Dialogues/Quests/UFOFallCutScene/0"));
         ufoFallCutSceneCamera.SetActive(false);
         tempPlayer.SetActive(false);
+        //freeLook.GetComponent<Cinemachine.CinemachineFreeLook>().enabled = true;
     }
 
     

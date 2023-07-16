@@ -51,7 +51,7 @@ public class QuestManager : MonoBehaviour
 
     public void SetQuestText()
     {
-        questText.text = "Current Quest:\n" + currentQuest.questDescription;
+        questText.text = "Gorev:\n" + currentQuest.questDescription + "\n" + currentQuest.questDescription2;
     }
 
     public void CompleteQuest()

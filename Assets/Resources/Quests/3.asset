@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 3
   m_EditorClassIdentifier: 
   questName: kasabaliyla konus
-  questDescription: "Uzaylinin yanina eve d\xF6n\\nKasabalilara uzaylidan bahset
-    (istege bagli)"
+  questDescription: "Uzaylinin yanina eve d\xF6n"
+  questDescription2: Kasabalilara uzaylidan bahset (istege bagli)
   questNumber: 3
   neededItemTag: 
   neededItemAmount: 0

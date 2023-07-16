@@ -7,7 +7,7 @@ using UnityEngine.AI;
 public class GoHomeWithAlien : MonoBehaviour
 {
     public int questNumber = 1;
-    bool dialogueStarted = false;
+    bool dialogueStarted = false, subtitleStarted = false;
 
     [SerializeField] GameObject dialogueCamera, player, alien;
 
@@ -23,6 +23,32 @@ public class GoHomeWithAlien : MonoBehaviour
                 dialogueStarted = true;
             }
         }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            if (subtitleStarted) return;
+            if (QuestManager.Instance.IsCurrentQuest(2))
+            {
+                StartCoroutine(StartSubtitles());
+                subtitleStarted = true;
+            }
+        }
+    }
+
+    IEnumerator StartSubtitles()
+    {
+        yield return new WaitForSeconds(4f);
+        var dd = Resources.LoadAll<DialogueData>("Subtitles/OdunAl");
+        foreach (var d in dd)
+        {
+            Debug.Log(d.dialogueText);
+            SubtitleManager.Instance.StartSubtitle(d.dialogueText);
+            yield return new WaitForSeconds(d.dialogueText.Length * SubtitleManager.Instance.subtitleTime);
+        }
+        SubtitleManager.Instance.DisableCanvas();
     }
 
     private void ChangeCameras()

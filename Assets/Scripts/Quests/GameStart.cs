@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class GameStart : MonoBehaviour
 {
-    [SerializeField] GameObject ufoFallCamera, mainCamera;
+    [SerializeField] GameObject ufoFallCamera, freeLook;
     void Start()
     {
+        freeLook.GetComponent<Cinemachine.CinemachineFreeLook>().enabled = false;
         InteractionCanvasManager.Instance.DisableCanvas();
         WaypointManager.Instance.DisableCanvas();
         //QuestManager.Instance.DisableQuestCanvas();

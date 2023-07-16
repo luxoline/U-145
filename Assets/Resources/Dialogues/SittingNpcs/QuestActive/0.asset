@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b584cd1c3fdf2a429baa575c8ba7634, type: 3}
   m_Name: 0
   m_EditorClassIdentifier: 
-  whoIsTalking: 
+  whoIsTalking: Cocuk
   dialogueText: Ayse Teyze! Faruk Amca! Ne gordugumu asla tahmin edemezsiniz!
   options:
   - text: '>'

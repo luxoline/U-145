@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: 0
   m_EditorClassIdentifier: 
   whoIsTalking: Cocuk
-  dialogueText: "Sen de nesin? \xC7ok farkl\u0131 g\xF6r\xFCn\xFCyorsun."
+  dialogueText: O da ne?? Orada yatan biri var sanirim.
   options:
   - text: '>'
-    nextDialogue: {fileID: 11400000, guid: 338b95ba0b34df4438909568d0fbf3b7, type: 2}
+    nextDialogue: {fileID: 11400000, guid: 02af51091551dc64c9cfa7f06da10385, type: 2}
     quest: {fileID: 0}
     isEndingOption: 0
     isDisabled: 0
-    onclickGameObjectName: 0
+    onclickGameObjectName: 

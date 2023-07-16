@@ -15,13 +15,9 @@ public class ReturnHome : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            foreach (var questNumber in questNumbers)
-            {
-                if (!QuestManager.Instance.IsCurrentQuest(questNumber))
-                {
-                    return;
-                }
-            }
+            var isCurrentQuest = QuestManager.Instance.IsCurrentQuest(questNumbers[0]) || QuestManager.Instance.IsCurrentQuest(questNumbers[1]);
+            if (!isCurrentQuest) return;
+
             if (!dialogueStarted)
             {
                 StartDialogue();

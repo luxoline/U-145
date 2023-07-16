@@ -21,20 +21,21 @@ public class NPC_Interaction : MonoBehaviour
 
         if (canTalk && Input.GetKeyDown(KeyCode.E))
         {
-            npc.GetComponent<Animator>().SetFloat("vertical", 1);
-            isTalked = true;
             if (QuestManager.Instance.IsCurrentQuest(npcQuestNumber))
             {
-                DialogueManager.Instance.StartDialogue(Resources.Load<DialogueData>("Dialogues/" + transform.parent.gameObject.name + "/QuestActive/0"), true);
                 if (isTalked)
                 {
+                    WaypointManager.Instance.DisableCanvas();
                     DialogueManager.Instance.StartDialogue(Resources.Load<DialogueData>("Dialogues/" + transform.parent.gameObject.name + "/NoQuest/0"), true);
+                    return;
                 }
+                DialogueManager.Instance.StartDialogue(Resources.Load<DialogueData>("Dialogues/" + transform.parent.gameObject.name + "/QuestActive/0"), true);
             }
             else
             {
                 DialogueManager.Instance.StartDialogue(Resources.Load<DialogueData>("Dialogues/" + transform.parent.gameObject.name + "/NoQuest/0"), true);
             }
+            isTalked = true;
         }
     }
 
@@ -49,7 +50,7 @@ public class NPC_Interaction : MonoBehaviour
 
             if (WaypointManager.Instance.target == this.transform.parent)
             {
-                WaypointManager.Instance.gameObject.SetActive(false);
+                WaypointManager.Instance.DisableCanvas();
             }
         }
     }
@@ -58,13 +59,9 @@ public class NPC_Interaction : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            WaypointManager.Instance.EnableCanvas();
             canTalk = false;
             InteractionCanvasManager.Instance.DisableCanvas();
-
-            if (WaypointManager.Instance.target == this.transform.parent)
-            {
-                WaypointManager.Instance.gameObject.SetActive(true);
-            }
         }
     }
 }

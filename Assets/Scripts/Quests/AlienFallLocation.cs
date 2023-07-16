@@ -18,7 +18,7 @@ public class AlienFallLocation : MonoBehaviour
             playerController.canWalk = false;
             playerController.GetComponent<Rigidbody>().velocity = Vector3.zero;
             playerController.GetComponentInChildren<Animator>().SetTrigger("idle");
-            var lookPos = transform.position;
+            var lookPos = alien.transform.position;
             lookPos.y = playerController.transform.position.y;
             playerController.transform.LookAt(lookPos);
             alien.GetComponent<Animator>().SetBool("standUp", true);
