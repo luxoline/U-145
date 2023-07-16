@@ -22,7 +22,7 @@ public class AlienFallLocation : MonoBehaviour
             lookPos.y = playerController.transform.position.y;
             playerController.transform.LookAt(lookPos);
             alien.GetComponent<Animator>().SetBool("standUp", true);
-            DialogueManager.Instance.StartDialogue(Resources.Load<DialogueData>("Dialogues/Quests/deneme/0"));
+            DialogueManager.Instance.StartDialogue(Resources.Load<DialogueData>("Dialogues/Quests/AlienFallLocation/0"));
             WaypointManager.Instance.DisableCanvas();
             QuestManager.Instance.DisableQuestCanvas();
             dialogueCamera.SetActive(true);
