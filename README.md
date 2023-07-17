@@ -70,3 +70,5 @@ Astrian Tales üçüncül kişi bakış açısından köylü bir çocuğu kontro
 
   **Sprint Retrospective:**
   * Takım arkadaşlarımızla gayet olumlu bir sprint geçirdiğimizi düşünüyoruz, sadece hikaye değişikliği bu kadar geç vakitte olmasaydı oyuna daha fazla detay ekleyebilirdik.
+ 
+  [Projede kullanılan assetler](https://docs.google.com/document/d/14Ip-JO6N9mxilCj85LW_WNBioAzkzmnhDYmOH19YsF8/edit)
