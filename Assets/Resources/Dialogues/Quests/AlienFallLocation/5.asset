@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 5
   m_EditorClassIdentifier: 
   whoIsTalking: Uzayli
-  dialogueText: ... *kafasini kaldirir*
+  dialogueText: "... *kafas\u0131n\u0131 kald\u0131r\u0131r*"
   options:
   - text: '>'
     nextDialogue: {fileID: 11400000, guid: 14113957bfd4d71409a338849a86e242, type: 2}
