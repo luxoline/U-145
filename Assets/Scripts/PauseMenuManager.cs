@@ -1,9 +1,16 @@
+using System;
+using System.Collections.Generic;
 using TMPro;
+using Unity.Services.Analytics;
+using Unity.Services.Core;
+using Unity.Services.Core.Environments;
 using UnityEngine;
+using UnityEngine.Analytics;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static UnityEditor.Searcher.Searcher;
 
 public class PauseMenuManager : MonoBehaviour
 {
@@ -17,11 +24,40 @@ public class PauseMenuManager : MonoBehaviour
     [SerializeField] AudioSource musicSource;
 
 
+    public string environment = "production";
+
+    bool paused = false;
+
+    async void Start()
+    {
+        try
+        {
+            var options = new InitializationOptions()
+                .SetEnvironmentName(environment);
+
+            await UnityServices.InitializeAsync(options);
+        }
+        catch (Exception exception)
+        {
+            Debug.LogError("Error during Unity Services initialization: " + exception.Message);
+
+        }
+    }
+
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            PauseGame();
+            if (paused)
+            {
+                ResumeGame();
+                paused = false;
+            }
+            else
+            {
+                PauseGame();
+                paused = true;
+            }
         }
     }
 
@@ -39,10 +75,17 @@ public class PauseMenuManager : MonoBehaviour
 
     public void OnVolumeChange()
     {
+        AnalyticsService.Instance.StartDataCollection();
         var volume = volumeSlider.value;
         AudioListener.volume = volume;
         volumeTextValue.text = (volume*100).ToString("0.0");
         OnVolumeApply();
+        var analyticsResult = Analytics.CustomEvent("VolumeChange", new Dictionary<string, object>
+        {
+            { "Volume", volume }
+        });
+
+        Debug.Log($"Analytics result: {analyticsResult}");
     }
 
     public void OnMusicVolumeChange()

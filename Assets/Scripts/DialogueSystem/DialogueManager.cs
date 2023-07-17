@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Analytics;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
@@ -77,7 +80,12 @@ public class DialogueManager : MonoBehaviour
         {
             DialogOption selectedOption = currentDialogue.options[optionIndex];
             Debug.Log("optionIndex2: " + optionIndex);
+            var analyticsResult = Analytics.CustomEvent("SelectedOption", new Dictionary<string, object>
+            {
+                { "Selected", selectedOption.text }
+            });
 
+            Debug.Log($"Analytics result: {analyticsResult}");
             if (selectedOption.quest != null)
             {
                 QuestManager.Instance.SetQuest(selectedOption.quest);
