@@ -7,7 +7,8 @@ public class Ufo : MonoBehaviour
 {
     [SerializeField] GameObject alien, ufoPrefab, tempPlayer, freeLook;
     [SerializeField] GameObject ufoFallCutSceneCamera;
-
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip ufoFallSound;
     private void Start()
     {
         //mainCamera.SetActive(false);
@@ -27,6 +28,10 @@ public class Ufo : MonoBehaviour
         //freeLook.GetComponent<Cinemachine.CinemachineFreeLook>().enabled = true;
     }
 
-    
+    public void PlayFallSound()
+    {
+        audioSource.volume = 0.7f;
+        audioSource.PlayOneShot(ufoFallSound);
+    }
 
 }
