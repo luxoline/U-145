@@ -8,14 +8,14 @@ U-145
  * Ayla Bilgin: Aktif olmayan üye
  * Sebla Karabunar: Aktif olmayan üye
  ## Ürün İsmi
-  Astrian Tales
+  Reality's Mirage
 ## Ürün Açıklaması
-Astrian Tales üçüncül kişi bakış açısından köylü bir çocuğu kontrol ettiğimiz hikaye tabanlı bir keşif oyunudur.
+Reality's Mirage üçüncül kişi bakış açısından köylü bir çocuğu kontrol ettiğimiz hikaye tabanlı bir keşif oyunudur.
 ## Ürün Özellikleri
- Astrian Tales, galakside yolunu kaybetmiş olan uzaylı arkadaşımızın dünyanın bir köşesinde yer alan bir kasabaya düşüşüyle başlar. Bu küçük arkadaşımızla yolları kesişen ve onunla bir maceraya atılan Hasan'ın gerçeklerle yüzleşmesi gerekmektedir. 
+ * Reality's Mirage, galakside yolunu kaybetmiş olan uzaylı arkadaşımızın dünyanın bir köşesinde yer alan bir kasabaya düşüşüyle başlar. Bu küçük arkadaşımızla yolları kesişen ve onunla bir maceraya atılan Hasan'ın gerçeklerle yüzleşmesi gerekmektedir. 
+ * Ticarileştirme mekaniği için ayrı bir çalışma yapılmamıştır, Steam'de ücretli satılacaktır.
 ## Hedef Kitle
 * Indie oyun severler
-* Alternatif son arayan oyuncular
 ## Product Backlog
 [Trello Backlog Board](https://trello.com/b/6xbCLzBb/pm).
 
